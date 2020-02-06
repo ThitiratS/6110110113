@@ -67,7 +67,8 @@ public class Pokemon {
     }
     public void eatberry()
     {
-        hp = maxHP;
+        if(hp <= maxHP)
+            hp = 2*hp;
     }
     public void upLevel()
     {
