@@ -1,3 +1,5 @@
+
+
 public class Pokemon {
     private String name;
     private String type;
@@ -24,7 +26,8 @@ public class Pokemon {
         attackPower = 150;
 
     }
-    public void start()
+    
+	public void start()
     {
         System.out.println("Name :" + name);
         System.out.println("Type :" + type);
@@ -58,11 +61,15 @@ public class Pokemon {
     
     public void setHP() 
     {
-       if(hp <= 0)
-       {
+        if(hp <= 0)
+        {
             System.out.println("Faint!");
-       }
-
+            eatberry();
+        }
+    }
+    public void eatberry()
+    {
+        hp = maxHP;
     }
     public void upLevel()
     {
