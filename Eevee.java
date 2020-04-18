@@ -10,5 +10,4 @@ public class Eevee extends Pokemon {
         System.out.println(" " +enemy.getHp());
     }
 
-
 }
