@@ -18,33 +18,32 @@ public class StatusPokemon extends JFrame {
         JPanel p2 = new JPanel();
         
         try {
-            
-        
-        Pokemon partners = p.get(i);
 
-        p1.setBorder(BorderFactory.createEmptyBorder(70, 15, 15, 10));
-        p2.setBorder(BorderFactory.createEmptyBorder(70, 15, 50, 100));
+        	Pokemon partners = p.get(i);
 
-        p1.setLayout(new BoxLayout(p1, BoxLayout.Y_AXIS));
-        p2.setLayout(new BoxLayout(p2, BoxLayout.Y_AXIS));
+        	p1.setBorder(BorderFactory.createEmptyBorder(70, 15, 15, 10));
+        	p2.setBorder(BorderFactory.createEmptyBorder(70, 15, 50, 100));
+
+        	p1.setLayout(new BoxLayout(p1, BoxLayout.Y_AXIS));
+        	p2.setLayout(new BoxLayout(p2, BoxLayout.Y_AXIS));
         
-        JRadioButton b0 = new JRadioButton("Number : " + i);
-        JRadioButton b1 = new JRadioButton("Name : " + partners.getMyName());
-        JRadioButton b2 = new JRadioButton("Pokemon : " + partners.getName());
-        JRadioButton b3 = new JRadioButton("Type : " + partners.getType());
-        JRadioButton b4 = new JRadioButton("Level : " + partners.getLevel());
-        JRadioButton b5 = new JRadioButton("HP : " + partners.getHp());
-        JRadioButton b6 = new JRadioButton("EXP : " + partners.getExp());
-        JRadioButton b7 = new JRadioButton("Gender : " + partners.getGen());    
+        	JRadioButton b0 = new JRadioButton("Number : " + i);
+        	JRadioButton b1 = new JRadioButton("Name : " + partners.getMyName());
+        	JRadioButton b2 = new JRadioButton("Pokemon : " + partners.getName());
+        	JRadioButton b3 = new JRadioButton("Type : " + partners.getType());
+        	JRadioButton b4 = new JRadioButton("Level : " + partners.getLevel());
+		JRadioButton b5 = new JRadioButton("HP : " + partners.getHp());
+        	JRadioButton b6 = new JRadioButton("EXP : " + partners.getExp());
+        	JRadioButton b7 = new JRadioButton("Gender : " + partners.getGen());    
         
-        p1.add(b0);
-        p1.add(b1);
-        p1.add(b2);
-        p1.add(b3);
-        p2.add(b4);
-        p2.add(b5);
-        p2.add(b6);
-        p2.add(b7); 
+        	p1.add(b0);
+        	p1.add(b1);
+        	p1.add(b2);
+        	p1.add(b3);
+       	 	p2.add(b4);
+        	p2.add(b5);
+        	p2.add(b6);
+        	p2.add(b7); 
                
         
 
@@ -105,6 +104,7 @@ public class StatusPokemon extends JFrame {
             j1.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
             c.add(j1, BorderLayout.WEST);
+		
         } catch (NullPointerException e) {
             
         }
@@ -122,18 +122,16 @@ public class StatusPokemon extends JFrame {
         
         p3.add(button2);
         button2.add(Box.createRigidArea(new Dimension(40, 18)));
-        
-        
-       
         button2.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) {
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) {
                 setVisible(false);
             }
-		});
+	});
+	    
         button1.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) { 
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) { 
                 
                 i++;
                 try {
@@ -156,7 +154,7 @@ public class StatusPokemon extends JFrame {
         c.add(p3, BorderLayout.SOUTH);
 
         setSize(720, 350);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);	
         setResizable(false);
         
