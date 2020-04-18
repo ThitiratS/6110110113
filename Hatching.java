@@ -117,6 +117,7 @@ public class Hatching extends JFrame {
         c.add(p2, BorderLayout.WEST);
         c.add(p4, BorderLayout.CENTER);
         c.add(b1,BorderLayout.SOUTH);
+	    
         pack();
         setSize(800, 470);
         //setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
