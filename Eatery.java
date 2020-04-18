@@ -28,37 +28,36 @@ public class Eatery extends JFrame {
         txtName.setSize(180, 150);
         getContentPane().add(txtName);
         txtName.setBounds(80, 100, 260, 20);
-        btnClick.setText("Click");
+      	btnClick.setText("Click");
 
         btnClick.addActionListener(new ActionListener(){
 			//anonymous class
-			public void actionPerformed(ActionEvent e) { 
+		public void actionPerformed(ActionEvent e) { 
 
-
-                try {
-                    no = txtName.getText();
-                    int result = Integer.parseInt(no);
-                    //System.out.println(result);
-                    for(int i = 0; i < bag.size() ; i++){
-                        //System.out.println(wildPokemon );
-                        if(result == i){
-                            Pokemon myPokemon = bag.get(i);
-                            Feed f = new Feed(myPokemon, r, b, p);
-                            f.use(myPokemon, r, b, p);
+                	try {
+                    		no = txtName.getText();
+                    		int result = Integer.parseInt(no);
+                    		//System.out.println(result);
+                   		for(int i = 0; i < bag.size() ; i++){
+                        	//System.out.println(wildPokemon );
+                        		if(result == i){
+                           			Pokemon myPokemon = bag.get(i);
+                            			Feed f = new Feed(myPokemon, r, b, p);
+                           			f.use(myPokemon, r, b, p);
                 
-                            System.out.println(bag);
-                        }
-                    }
+                           			// System.out.println(bag);
+                       			}
+                    		}
                     
-                } catch (NumberFormatException evt) {
+               		} catch (NumberFormatException evt) {
                    
-                    JOptionPane.showMessageDialog(null, "ErrorMsg","Please Enter Number", JOptionPane.ERROR_MESSAGE);
-                }
-                //btnClickActionPerformed(e);
-                setVisible(false);
+                    		JOptionPane.showMessageDialog(null, "ErrorMsg","Please Enter Number", JOptionPane.ERROR_MESSAGE);
+                	}
+                	//btnClickActionPerformed(e);
+                	setVisible(false);
                 
-			}
-		});
+		}
+	});
 
         getContentPane().add(btnClick);
         btnClick.setBounds(160, 140, 90, 23);
