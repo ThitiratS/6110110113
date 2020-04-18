@@ -4,16 +4,12 @@ import java.awt.event.*;
 import java.util.*;
 
 public class Eatery extends JFrame {
-
     
     private static final long serialVersionUID = 1L;
     private JLabel jLabel1;
     public JTextField txtName;
     private JButton btnClick;
     private String no;
-    //private Pokemon wildPokemon;
-    //private ArrayList<Pokemon> bag;
-
     
     public Eatery(RazzBerry r,Banana b,Pineapple p,ArrayList<Pokemon> bag){
         
@@ -22,7 +18,6 @@ public class Eatery extends JFrame {
         txtName = new JTextField();
         btnClick = new JButton();
         
-        //setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
         
         jLabel1.setText("Pokemon Number");
@@ -68,29 +63,9 @@ public class Eatery extends JFrame {
         getContentPane().add(btnClick);
         btnClick.setBounds(160, 140, 90, 23);
         setSize(400, 300);
-		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
-        //setResizable(false);
-        
+             
     }
-    // private void btnClickActionPerformed(ActionEvent evt) {   
-                                     
-        
-        
-
-    // } 
-    
-    // public void playgui(Pokemon wildPokemon,ArrayList<Pokemon> bags) {
-    //     Mine frame = new Mine(wildPokemon,bags);
-    //     frame.setSize(400, 300);
-	// 	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    //     frame.setVisible(true);
-    //     frame.setResizable(false);
-    // }
-
-   
-    
-   
-   
 
 }
