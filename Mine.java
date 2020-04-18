@@ -1,12 +1,10 @@
 
-
 import javax.swing.*;
 import java.awt.event.*;
 import java.util.*;
 
 public class Mine extends JFrame {
 
-    
     private static final long serialVersionUID = 1L;
     private JLabel jLabel1;
     public JTextField txtName;
@@ -23,6 +21,7 @@ public class Mine extends JFrame {
         btnClick = new JButton();
         this.wildPokemon = wildPokemon;
         bag = new ArrayList<Pokemon>();
+	    
         for(Pokemon b : bags){
             bag.add(b);
         }
@@ -42,20 +41,18 @@ public class Mine extends JFrame {
         btnClick.setText("Click");
 
         btnClick.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) { 
-               
-                
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) { 
+  
                 btnClickActionPerformed(e);
                 setVisible(false);
                 
-			}
-		});
+	    }
+	});
 
         getContentPane().add(btnClick);
         btnClick.setBounds(160, 140, 90, 23);
-        
-        
+ 
     }
     private void btnClickActionPerformed(ActionEvent evt) {   
                                      
@@ -78,9 +75,9 @@ public class Mine extends JFrame {
            
             JOptionPane.showMessageDialog(null, "ErrorMsg","Please Enter Number", JOptionPane.ERROR_MESSAGE);
         }
-        
 
     } 
+	
     public void win(Pokemon wildPokemon,Pokemon myPokemon,ArrayList<PokemonBall> ball){
         boolean isWin = false;
         do{
@@ -102,34 +99,24 @@ public class Mine extends JFrame {
 
         if(isWin){
             
-            
-            //bag.add(wildPokemon);
-            
             Trainer.bag = bag;
             System.out.println(bag);
             JOptionPane.showMessageDialog(null,"You Win");
             new BallSelection(wildPokemon,myPokemon,bag,ball);
  
         }
+	    
         else{
             System.out.println(wildPokemon.getName() + " win");
         }
-
-        //sc.nextLine();  
     }
-    
     
     public void playgui(Pokemon wildPokemon,ArrayList<Pokemon> bags, ArrayList<PokemonBall> ball) {
         Mine frame = new Mine(wildPokemon,bags,ball);
         frame.setSize(400, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         frame.setResizable(false);
     }
-
-   
-    
-   
-   
 
 }
