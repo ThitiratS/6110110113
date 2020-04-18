@@ -9,9 +9,7 @@ import java.io.IOException;
 import java.util.*;
 
 public class MyBag extends JFrame {
-    /**
-     *
-     */
+    
     private static final long serialVersionUID = 1L;
 
     public MyBag(ArrayList<Pokemon> bag, ArrayList<PokemonBall> ball, ArrayList<Food> food) {
@@ -39,7 +37,7 @@ public class MyBag extends JFrame {
         JPanel p1 = new JPanel();
         JLabel k1 = new JLabel("Pokemon Hatching ", JLabel.CENTER);
         p1.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-		k1.setFont(myFont.deriveFont(Font.BOLD,35f));
+	k1.setFont(myFont.deriveFont(Font.BOLD,35f));
         k1.setForeground(Color.MAGENTA);
         p1.add(k1);
 
@@ -53,8 +51,8 @@ public class MyBag extends JFrame {
         b1.add(Box.createRigidArea(new Dimension(230, 40)));
         b1.setFont(b1.getFont().deriveFont(Font.ITALIC,18.0f));
         b1.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) {
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) {
                 new StatusPokemon(bag);
             }
         });
@@ -62,7 +60,6 @@ public class MyBag extends JFrame {
         
         p2.add(label1);
         p2.add(b1);
-        
 
         JPanel p3 = new JPanel();
         p3.setLayout(new BoxLayout(p3, BoxLayout.Y_AXIS));
@@ -74,8 +71,8 @@ public class MyBag extends JFrame {
         b2.add(Box.createRigidArea(new Dimension(230, 40)));
         b2.setFont(b2.getFont().deriveFont(Font.ITALIC,18.0f));
         b2.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) {
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) {
                 new StatusBerry(food);
             }
         });
@@ -95,8 +92,8 @@ public class MyBag extends JFrame {
         b3.add(Box.createRigidArea(new Dimension(230, 40)));
         b3.setFont(b3.getFont().deriveFont(Font.ITALIC,18.0f));
         b3.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) {
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) {
                 new StatusBall(ball);
             }
         });
@@ -107,11 +104,9 @@ public class MyBag extends JFrame {
        
 
         JButton b4 = new JButton("CANCLE");
-        //b4.add(Box.createRigidArea(new Dimension(245, 25)));
-        //b3.setFont(b3.getFont().deriveFont(Font.ITALIC,18.0f));
         b4.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) {
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) {
                 setVisible(false);
             }
         });
@@ -127,7 +122,5 @@ public class MyBag extends JFrame {
         setVisible(true);	
 
     }
-
-
 
 }
