@@ -5,13 +5,14 @@ public class BodySlam  implements Posture {
     private String name;
 
     public BodySlam (String name){
+        
         this.name = name;
         this.cp = 27;
     }
 
     public void setName(String name) {
+        
         this.name = name;
-
     }
 
     public String getName() {
@@ -28,7 +29,9 @@ public class BodySlam  implements Posture {
         
         return cp;
     }
-    public String tosString(){
+    
+    public String toString(){
+        
         return name + " " + cp;
     }
 }
