@@ -1,3 +1,4 @@
+
 import java.util.*;
 
 public class Hikari implements Actor {
@@ -13,19 +14,24 @@ public class Hikari implements Actor {
       
         ball = new ArrayList<PokemonBall>();
     }
+    
     public String getName(){
         return name;
     }
+    
     public void setName(String name){
         this.name = name;
     }
+    
     public int getNum(){
         return ballnum;
     }
+    
     public ArrayList<PokemonBall> getBall(){
 
         return ball;
     }
+    
     public void addBall() {
         ArrayList<PokemonBall> balls = BallRandomizer.getBall(5);
     
@@ -38,9 +44,5 @@ public class Hikari implements Actor {
     public String toString(){
         return "Trainer : " +name + " Balls : " + ballnum  ;
     }
-    
-    
-  
-
 
 }
