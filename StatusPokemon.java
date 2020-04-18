@@ -50,55 +50,55 @@ public class StatusPokemon extends JFrame {
 
         JLabel j1 = new JLabel(new ImageIcon(""));;
             if(partners.getName() == "Pikachu of Satochi"|| partners.getName() == "Wild Pikachu"){
-                j1 = new JLabel(new ImageIcon("pikachu.jpg"));
+                j1 = new JLabel(new ImageIcon("img/pikachu.jpg"));
             }
             else if(partners.getName() == "Zanigame" || partners.getName() == "Wild Zanigame"  ){
-                j1 = new JLabel(new ImageIcon("zanigame.jpg"));
+                j1 = new JLabel(new ImageIcon("img/zanigame.jpg"));
             }
             else if(partners.getName() == "Raichu" || partners.getName() == "Wild Raichu"){
-                j1 = new JLabel(new ImageIcon("raichu.jpg"));
+                j1 = new JLabel(new ImageIcon("img/raichu.jpg"));
             }
             else if (partners.getName() == "Kabigon" || partners.getName() == "Wild Kabigon"){
-                j1 = new JLabel(new ImageIcon("kabigon.jpg"));
+                j1 = new JLabel(new ImageIcon("img/kabigon.jpg"));
             }
             else if(partners.getName() == "Bulbasaur" || partners.getName() == "Wild Bulbasaur"  ){
-                j1 = new JLabel(new ImageIcon("bulbasaur.jpg"));
+                j1 = new JLabel(new ImageIcon("img/bulbasaur.jpg"));
             }
             else if(partners.getName() == "Electabuzz" ){
-                j1 = new JLabel(new ImageIcon("electabuzz.jpg"));
+                j1 = new JLabel(new ImageIcon("img/electabuzz.jpg"));
             }
             else if (partners.getName() == "Voltorb" ){
-                j1 = new JLabel(new ImageIcon("voltorb.jpg"));
+                j1 = new JLabel(new ImageIcon("img/voltorb.jpg"));
             }
             else if(partners.getName() == "Pichu" ){
-                j1 = new JLabel(new ImageIcon("pichu.jpg"));
+                j1 = new JLabel(new ImageIcon("img/pichu.jpg"));
             }
             else if (partners.getName() == "Sobble" ){
-                j1 = new JLabel(new ImageIcon("sobble.jpg"));
+                j1 = new JLabel(new ImageIcon("img/sobble.jpg"));
             }
             else if(partners.getName() == "Drednaw" ){
-                j1 = new JLabel(new ImageIcon("drednaw.jpg"));
+                j1 = new JLabel(new ImageIcon("img/drednaw.jpg"));
             }
             else if (partners.getName() == "Krabby" ){
-                j1 = new JLabel(new ImageIcon("krabby.jpg"));
+                j1 = new JLabel(new ImageIcon("img/krabby.jpg"));
             }
             else if(partners.getName() == "Shiftry" ){
-                j1 = new JLabel(new ImageIcon("shiftry.jpg"));
+                j1 = new JLabel(new ImageIcon("img/shiftry.jpg"));
             }
             else if (partners.getName() == "Lombre" ){
-                j1 = new JLabel(new ImageIcon("lombre.jpg"));
+                j1 = new JLabel(new ImageIcon("img/lombre.jpg"));
             }
             else if(partners.getName() == "Grookey" ){
-                j1 = new JLabel(new ImageIcon("grookey.jpg"));
+                j1 = new JLabel(new ImageIcon("img/grookey.jpg"));
             }
             else if (partners.getName() == "Kangaskhan" ){
-                j1 = new JLabel(new ImageIcon("kangaskhan.jpg"));
+                j1 = new JLabel(new ImageIcon("img/kangaskhan.jpg"));
             }
             else if(partners.getName() == "Eevee" ){
-                j1 = new JLabel(new ImageIcon("eevee.jpg"));
+                j1 = new JLabel(new ImageIcon("img/eevee.jpg"));
             }
             else if (partners.getName() == "Jigglypuff" ){
-                j1 = new JLabel(new ImageIcon("jigglypuff.jpg"));
+                j1 = new JLabel(new ImageIcon("img/jigglypuff.jpg"));
             }
         
         
