@@ -1,26 +1,21 @@
 
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.FileInputStream;
 import java.util.*;
-// import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Market extends JFrame {
 
     private static final long serialVersionUID = 1L;
     private ArrayList<PokemonBall> balls;
-    
-    
 
     public Market(RazzBerry r, Banana b, Pineapple p, ArrayList<PokemonBall> ball2)  {
         
         super("Pokemon Market");
         balls = new ArrayList<PokemonBall>();
-      
-        
-        System.out.println(ball2);
+  
+        //System.out.println(ball2);
         Container c = getContentPane();
         Pokeball pokeball = new Pokeball("Pokeball");
         Quickball quickball = new Quickball("Quickball");
@@ -96,48 +91,45 @@ public class Market extends JFrame {
         panel1.setLayout ( new BorderLayout ( ) );
         JButton b1 = new JButton("Razz Berry");
         b1.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) {   
-               
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) {   
                 addBerry(r);
-			}
+	    }
         });
         
         JButton b2 = new JButton("Nanab Berry");
         b2.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) {   
-                
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) {       
                 addBerry(b);
-                
-			}
+            }
         });
+	    
         JButton b3 = new JButton("Pinab Berry");
         b3.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) {   
-               
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) {          
                 addBerry(p);
-			}
+	    }
         });
+	    
         JButton d1 = new JButton("CLOSE");
         d1.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) {   
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) {   
                 System.out.println("Have : "+r.getNum()+" RAZZ Berry "+ b.getNum()+ " BANAB Berry "+ p.getNum()+ " PINAB Berry ");
                 setVisible(false);
-			}
+	    }
         });
-
        
         JLabel j1 = new JLabel(new ImageIcon("img/fruit.jpg"));
-       
-        
+
         JPanel p3 = new JPanel ( );
         p3.setLayout(new BoxLayout(p3, BoxLayout.Y_AXIS));
         b1.add(Box.createRigidArea(new Dimension(150, 94)));
         b2.add(Box.createRigidArea(new Dimension(150, 94)));
         b3.add(Box.createRigidArea(new Dimension(150, 94)));
+	    
         p3.add(b1);
         p3.add(b2);
         p3.add(b3);
@@ -153,61 +145,57 @@ public class Market extends JFrame {
 
         JPanel pk2 = new JPanel();
         JLabel k2 = new JLabel("Welcome to Market ", JLabel.CENTER);
-		k2.setFont(myFont.deriveFont(Font.BOLD,30f));
+	k2.setFont(myFont.deriveFont(Font.BOLD,30f));
         k2.setForeground(Color.RED);
         pk2.add(k2);
 
         JButton b4 = new JButton("Pokeball");
         b4.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) {   
-               
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) {     
                 addBall(pokeball);
-                System.out.println(pokeball);
-               
-                
-			}
+                //System.out.println(pokeball);
+ 
+	    }
         });
-        
-        //System.out.println(bs);
+
         
         JButton b5 = new JButton("Quickball");
         b5.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) {   
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) {   
                
                 addBall(quickball);
                 System.out.println(quickball);
-			}
+	    }
         });
         
                 
         JButton b6 = new JButton("Timerball");
         b6.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) {   
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) {   
               
                 addBall(timerball);
                 System.out.println(timerball);
-			}
+	    }
         });
-        
-               
+ 
         JButton b7 = new JButton("Ultraball");
         b7.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) {   
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) {   
                
                 addBall(ultraball);
                 System.out.println(ultraball);
-			}
+	    }
         });
         
         
         JButton b8 = new JButton("Masterball");
         b8.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) {   
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) {   
                 
                 addBall(masterball);
                 System.out.println(masterball);
@@ -217,15 +205,15 @@ public class Market extends JFrame {
        
         JButton d2 = new JButton("CLOSE");
         d2.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) {   
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) {   
                 
                 System.out.println(balls);
                 Bag.ball = balls;
                 System.out.println(Bag.ball);
                 setVisible(false);
                
-			}
+	    }
         });
 
         JPanel p4 = new JPanel();
