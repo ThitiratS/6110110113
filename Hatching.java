@@ -8,12 +8,10 @@ import java.io.IOException;
 import java.util.*;
 
 public class Hatching extends JFrame {
-    /**
-     *
-     */
+
     private static final long serialVersionUID = 1L;
 
-    public Hatching(Pokemon male,Pokemon female,ArrayList<Pokemon> partners) {
+    public Hatching(Pokemon male, Pokemon female, ArrayList<Pokemon> partners) {
         super("Hatch Pokemon Egg");
         Container c = getContentPane();
         
@@ -44,28 +42,29 @@ public class Hatching extends JFrame {
 
         JLabel j1 = new JLabel(new ImageIcon(" "),JLabel.CENTER);
         if(male.getName() == "Pikachu of Satochi"|| male.getName() == "Wild Pikachu"){
-            j1 = new JLabel(new ImageIcon("pikachu.jpg"));
+            j1 = new JLabel(new ImageIcon("img/pikachu.jpg"));
         }
         else if(male.getName() == "Zanigame" || male.getName() == "Wild Zanigame"  ){
-            j1 = new JLabel(new ImageIcon("zanigame.jpg"));
+            j1 = new JLabel(new ImageIcon("img/zanigame.jpg"));
         }
         else if(male.getName() == "Raichu" || male.getName() == "Wild Raichu"){
-            j1 = new JLabel(new ImageIcon("raichu.jpg"));
+            j1 = new JLabel(new ImageIcon("img/raichu.jpg"));
         }
         else if (male.getName() == "Kabigon" || male.getName() == "Wild Kabigon"){
-            j1 = new JLabel(new ImageIcon("kabigon.jpg"));
+            j1 = new JLabel(new ImageIcon("img/kabigon.jpg"));
         }
         else if(male.getName() == "Bulbasaur" || male.getName() == "Wild Bulbasaur"  ){
-            j1 = new JLabel(new ImageIcon("bulbasaur.jpg"));
+            j1 = new JLabel(new ImageIcon("img/bulbasaur.jpg"));
+        }
+        else {
+            new Pair(partners);
         }
         j1.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         
-        // JPanel p3 = new JPanel();
-        // p3.setBorder(BorderFactory.createEmptyBorder(14, 14, 14, 14));
+      
         JLabel k2 = new JLabel(" Male Pokemon " + male.getName(), JLabel.CENTER);
 		k2.setFont(myFont2.deriveFont(Font.BOLD,18f));
         k2.setForeground(Color.BLUE);
-        //p3.add(k2);
 
         p2.add(j1);
         p2.add(k2);
@@ -78,30 +77,32 @@ public class Hatching extends JFrame {
 
         JLabel j2 = new JLabel(new ImageIcon(" "));
         if(female.getName() == "Pikachu of Satochi"|| female.getName() == "Wild Pikachu"){
-            j2 = new JLabel(new ImageIcon("pikachu.jpg"));
+            j2 = new JLabel(new ImageIcon("img/pikachu.jpg"));
             
         }
         else if(female.getName() == "Zanigame" || female.getName() == "Wild Zanigame"  ){
-            j2 = new JLabel(new ImageIcon("zanigame.jpg"));
+            j2 = new JLabel(new ImageIcon("img/zanigame.jpg"));
         }
         else if(female.getName() == "Raichu" || female.getName() == "Wild Raichu"){
-            j2 = new JLabel(new ImageIcon("raichu.jpg"));
+            j2 = new JLabel(new ImageIcon("img/raichu.jpg"));
         }
         else if (female.getName() == "Kabigon" || female.getName() == "Wild Kabigon"){
-            j2 = new JLabel(new ImageIcon("kabigon.jpg"));
+            j2 = new JLabel(new ImageIcon("img/kabigon.jpg"));
         }
         else if(female.getName() == "Bulbasaur" || female.getName() == "Wild Bulbasaur"  ){
-            j2 = new JLabel(new ImageIcon("bulbasaur.jpg"));
+            j2 = new JLabel(new ImageIcon("img/bulbasaur.jpg"));
+        }
+        else {
+            new Pair(partners);
         }
         j2.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         
 
-        // JPanel p5 = new JPanel();
-        // p5.setBorder(BorderFactory.createEmptyBorder(14, 14, 14, 14));
+        
         JLabel k3 = new JLabel("Female Pokemon " + female.getName(), JLabel.CENTER);
 		k3.setFont(myFont2.deriveFont(Font.BOLD,18f));
         k3.setForeground(Color.RED);
-        //p5.add(k3);
+        
 
         p4.add(j2);
         p4.add(k3);
@@ -129,11 +130,6 @@ public class Hatching extends JFrame {
         setVisible(true);	
         //setResizable(false);
     }
-    // public void hatchEggs(Pokemon male,Pokemon female){
 
-    //     new Hatching(male, female);
-
-    // }
-  
 
 }
