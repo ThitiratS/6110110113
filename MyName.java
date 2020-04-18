@@ -5,7 +5,6 @@ import java.util.*;
 
 public class MyName extends JFrame {
 
-    
     private static final long serialVersionUID = 1L;
     private JLabel jLabel1;
     public JTextField txtName;
@@ -15,7 +14,6 @@ public class MyName extends JFrame {
     private ArrayList<Pokemon> bags;
     private ArrayList<PokemonBall> balls;
 
-    
     public MyName(Pokemon partner,ArrayList<Pokemon> bag){
         
         super("Set Pokemon Name");
@@ -26,15 +24,11 @@ public class MyName extends JFrame {
         bags = new ArrayList<Pokemon>(); 
         balls = new ArrayList<PokemonBall>();
         System.out.println(Bag.ball);
-        //bags = bag;
-        //Trainer.bag = bag;
-        //System.out.print(bags);
-        // for(Pokemon p : Trainer.bag){
-        //     bag.add(p);
-        // }
+      
         for(Pokemon p : bag){
             bags.add(p);
         }      
+	    
         balls = Bag.ball;  
         //setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -50,23 +44,22 @@ public class MyName extends JFrame {
         btnClick.setText("Click");
         
         btnClick.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) { 
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) { 
                 
                 btnClickActionPerformed(e);
                 setVisible(false);
                 
-			}
-		});
+	    }
+	});
 
         getContentPane().add(btnClick);
         btnClick.setBounds(160, 140, 90, 23);
         
-        
     }
+	
     private void btnClickActionPerformed(ActionEvent evt) {   
-                                                
-            
+
             JOptionPane.showMessageDialog(this, "Pokamon Name is " + txtName.getText());
             name = txtName.getText();
             Bag b = new Bag();
@@ -77,9 +70,9 @@ public class MyName extends JFrame {
             Bag.ball=balls ;
             System.out.println(Trainer.bag);
             System.out.println(Bag.ball);
-            
 
     } 
+	
     public void playgui(Pokemon partner,ArrayList<Pokemon> bag) {
         MyName frame = new MyName(partner,bag);
         frame.setSize(400, 300);
@@ -87,46 +80,5 @@ public class MyName extends JFrame {
         frame.setVisible(true);
         frame.setResizable(false);
     }
-
-   
-    
-    // public static void main(String args[]) {
-    //     MyName frame = new MyName();
-    //     frame.setSize(400, 300);
-	// 	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	// 	frame.setVisible(true);
-    //     try {
-           
-    //         for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-    //             if ("Nimbus".equals(info.getName())) {         
-    //                 javax.swing.UIManager.setLookAndFeel(info.getClassName());
-    //                 break;      
-    //             }
-    //         }
-    
-    //     } catch (ClassNotFoundException ex) {
-  
-    //         java.util.logging.Logger.getLogger(MyName.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-
-    //     } catch (InstantiationException ex) {
-      
-    //         java.util.logging.Logger.getLogger(MyName.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-    
-    //     } catch (IllegalAccessException ex) {
-    
-    //         java.util.logging.Logger.getLogger(MyName.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-
-    //     } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-  
-    //         java.util.logging.Logger.getLogger(MyName.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-  
-    //     }
-          
-        
-       
-     
-    // }
-
-   
 
 }
