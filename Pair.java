@@ -6,18 +6,10 @@ import java.awt.*;
 
 public class Pair extends JFrame  {
 
-    /**
-     *
-     */
     private static final long serialVersionUID = 1L;
     private ArrayList<Pokemon> male,female;
-    //private JCheckBox j,j1,j2,j3,j4;
     private ArrayList<Pokemon> bag;
-    public static void main(String[] args){
 
-        //new Pair();
-        
-    }
     public Pair(ArrayList<Pokemon> bags){
         
         super("Pair Pokemon");
@@ -33,7 +25,7 @@ public class Pair extends JFrame  {
         JPanel head = new JPanel();
         JLabel k1 = new JLabel("Hatch Pokemon", JLabel.CENTER);
         head.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-		k1.setFont(k1.getFont().deriveFont(Font.BOLD,35f));
+	k1.setFont(k1.getFont().deriveFont(Font.BOLD,35f));
         head.setForeground(Color.green);
         head.add(k1);
 
@@ -77,11 +69,8 @@ public class Pair extends JFrame  {
         JButton btn = new JButton("SELECT");
         button.setLayout(new BoxLayout(button, BoxLayout.X_AXIS));
         btn.add(Box.createRigidArea(new Dimension(330, 20)));
-        
-
-        btn.addActionListener ( new ActionListener ( )
-        {
-          //@Override
+        btn.addActionListener ( new ActionListener ( ){
+          
             public void actionPerformed ( ActionEvent event ){
                 new Male(male,female,bag);
             }
@@ -92,18 +81,11 @@ public class Pair extends JFrame  {
         JButton btn2 = new JButton("CANCLE");
         btn2.add(Box.createRigidArea(new Dimension(330, 20)));
         btn2.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) {
-                // Printing t = new Printing();
-                // partner.get(i).setMyName(Bag.bagString());
-                // bag.add(partner.get(i));
+	    
+	    public void actionPerformed(ActionEvent e) {
+              
                 setVisible(false);
-                // while (partner.get(i).getName() == null) {
-    
-                //     System.out.print("\n\nPlease enter your Pokemon name : ");
-                //     partner.get(i).setMyName(Bag.bagString());
-                // }
-                // t.printPartner(bag);
+            
             }
         });
         button.add(btn);
@@ -119,6 +101,4 @@ public class Pair extends JFrame  {
         //setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
-
-
 }
