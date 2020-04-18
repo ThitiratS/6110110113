@@ -10,5 +10,4 @@ public class Drednaw extends Pokemon{
         System.out.println(" " +enemy.getHp());
     }
 
-
 }
