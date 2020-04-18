@@ -9,23 +9,15 @@ import java.awt.*;
 
 public class MyPokemon extends JFrame  {
 
-    /**
-     *
-     */
     private static final long serialVersionUID = 1L;
     private ArrayList<Pokemon> bag;
-   
-    
-    // public static void main(String[] args){
-    //     new MyPokemon();
-        
-    // }
+ 
     public MyPokemon(Pokemon wildPokemon,ArrayList<PokemonBall> ball){
         
         super("Catch Wild Pokemon ");
         Container c = getContentPane();
         
-        System.out.println(wildPokemon);
+        //System.out.println(wildPokemon);
         //System.out.println(Trainer.bag);
         bag = new ArrayList<Pokemon>();
         
@@ -33,8 +25,7 @@ public class MyPokemon extends JFrame  {
             bag.add(a);
         }
         Font myFont = null;
-        
-        
+
         try{
             
             myFont = Font.createFont ( Font.TRUETYPE_FONT, new FileInputStream ( "font2/Pokemon Solid.ttf" ) );   
@@ -54,7 +45,7 @@ public class MyPokemon extends JFrame  {
         JPanel head = new JPanel();
         JLabel k1 = new JLabel("Select my Pokemon ", JLabel.CENTER);
         head.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-		k1.setFont(myFont.deriveFont(Font.BOLD,35f));
+	k1.setFont(myFont.deriveFont(Font.BOLD,35f));
         k1.setForeground(Color.RED);
         head.add(k1);
 
@@ -72,28 +63,27 @@ public class MyPokemon extends JFrame  {
         }
  
         button.setLayout(new BoxLayout(button, BoxLayout.X_AXIS));
-            btn.add(Box.createRigidArea(new Dimension(240, 20)));
-            btn.addActionListener(new ActionListener() {
+        btn.add(Box.createRigidArea(new Dimension(240, 20)));
+        btn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                     Mine m = new Mine(wildPokemon,bag,ball);
                     m.playgui(wildPokemon,bag,ball);
                     //setVisible(false);
-                }
+            }
 
-            });
+        });
 
-        
-        
         JButton btn2 = new JButton("CANCLE");
         btn2.add(Box.createRigidArea(new Dimension(240, 20)));
         btn2.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) {
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) {
                
                 setVisible(false);
                
             }
         });
+	    
         button.add(btn);
         button.add(btn2);
         
@@ -107,6 +97,4 @@ public class MyPokemon extends JFrame  {
         setVisible(true);
     }
 
-
-  
 }
