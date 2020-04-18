@@ -6,7 +6,6 @@ public class Partner {
     private ArrayList<PokemonBall> ball2;
     private ArrayList<PokemonBall> balls;
     private ArrayList<PokemonBall> ball3;
-    // private ArrayList<PokemonBall> ball;
     private ArrayList<Actor> actor;
 
     public Partner(){
@@ -15,7 +14,6 @@ public class Partner {
         ball2 = new ArrayList<PokemonBall>(); 
     }
     
-
     public void select(){
         
         Satochi s = new Satochi("Satochi",5);
@@ -35,15 +33,13 @@ public class Partner {
         return actor;
     }
 
-
     public void addBall(ArrayList<PokemonBall> ball){
         Pokeball pokeball = new Pokeball("Pokeball");
         Quickball quickball = new Quickball("Quickball");
         Timerball timerball = new Timerball("Timerball");
         Ultraball ultraball = new Ultraball("Ultraball");
         Masterball masterball = new Masterball("Masterball");
-        //balls.remove(balls);
-        
+
         for(PokemonBall b : ball){
             if(b.getName() == "Pokeball"){
                 balls.add(pokeball);
@@ -60,11 +56,9 @@ public class Partner {
             else if(b.getName() == "Masterball"){
                 balls.add(masterball);
             }
-            
-   
+
         }
-        
-        
+
         for(int i = 0 ; i < balls.size()-1 ; ++i){
             if(balls.get(i).getName() == balls.get(i+1).getName()){
                 balls.remove(i+1);
@@ -116,22 +110,22 @@ public class Partner {
             }    
         
         }
-        
-     
-        
     }
+    
     public ArrayList<PokemonBall> satochiBall() {
         balls.removeAll(balls);
         addBall(ball2);
         
         return balls;
     }
+    
     public ArrayList<PokemonBall> hikariBall() {
         balls.removeAll(balls);
         addBall(ball3);
         
         return balls;
     }
+    
     public void check(Pokeball pokeball,Quickball quickball,Timerball timerball, Ultraball ultraball ,Masterball masterball,int i){
         if(balls.get(i).getName() == "Pokeball"){
             int num = pokeball.getNum() + 1 ;
@@ -157,6 +151,7 @@ public class Partner {
         
 
     }
+    
     public void deleteBall(PokemonBall b){
         System.out.println(b);
         int ballNum = b.getNum()-1;
@@ -165,26 +160,7 @@ public class Partner {
         if(ballNum == 0){
             b.setNum(0);
         }
-        // if(b.getName() == "Pokeball"){
-        //     int num = pokeball.getNum() - 1 ;
-        //     pokeball.setNum(num);
-        // }
-        // else if(b.getName() == "Quickball"){
-        //     int num = quickball.getNum() - 1 ;
-        //     pokeball.setNum(num);
-        // }
-        // else if(b.getName() == "Timerball"){
-        //     int num = timerball.getNum() - 1 ;
-        //     pokeball.setNum(num);
-        // }
-        // else if(b.getName() == "Ultraball"){
-        //     int num = ultraball.getNum() - 1 ;
-        //     pokeball.setNum(num);
-        // }
-        // else if(b.getName() == "Masterball"){
-        //     int num = masterball.getNum() - 1 ;
-        //     pokeball.setNum(num);
-        // }
+       
     }
 
     public void toString(ArrayList<Actor> actors){
@@ -194,7 +170,4 @@ public class Partner {
             number++ ;
         }
     }
-    
-
-
 }
