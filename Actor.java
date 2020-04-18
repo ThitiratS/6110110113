@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 
 public interface Actor {
@@ -8,4 +9,5 @@ public interface Actor {
     int getNum();
     String toString();
     ArrayList<PokemonBall> getBall();
+    
 }
