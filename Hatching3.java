@@ -41,15 +41,15 @@ public class Hatching3 extends JFrame{
                 int type = (int)(Math.random()*3);
                 if(type == 0){
                     pokemons.add(new Electabuzz("Electabuzz","Electric"));
-                    j1 = new JLabel(new ImageIcon("electabuzz.jpg"));
+                    j1 = new JLabel(new ImageIcon("img/electabuzz.jpg"));
                 }
                 if(type == 1){
                     pokemons.add(new Voltorb("Voltorb","Electric"));
-                    j1 = new JLabel(new ImageIcon("voltorb.jpg"));
+                    j1 = new JLabel(new ImageIcon("img/voltorb.jpg"));
                 }
                 if(type == 2){
                     pokemons.add(new Pichu("Pichu","Electric"));
-                    j1 = new JLabel(new ImageIcon("pichu.jpg"));
+                    j1 = new JLabel(new ImageIcon("img/pichu.jpg"));
                 }
             }
         }
@@ -58,15 +58,15 @@ public class Hatching3 extends JFrame{
                 int type = (int)(Math.random()*3);
                 if(type == 0){
                     pokemons.add(new Sobble("Sobble","Water"));
-                    j1 = new JLabel(new ImageIcon("sobble.jpg"));
+                    j1 = new JLabel(new ImageIcon("img/sobble.jpg"));
                 }
                 if(type == 1){
                     pokemons.add(new Drednaw("Drednaw","Water"));
-                    j1 = new JLabel(new ImageIcon("drednaw.jpg"));
+                    j1 = new JLabel(new ImageIcon("img/drednaw.jpg"));
                 }
                 if(type == 2){
                     pokemons.add(new Krabby("Krabby","Water"));
-                    j1 = new JLabel(new ImageIcon("krabby.jpg"));
+                    j1 = new JLabel(new ImageIcon("img/krabby.jpg"));
                 }
             }
         }
@@ -75,15 +75,15 @@ public class Hatching3 extends JFrame{
                 int type = (int)(Math.random()*3);
                 if(type == 0){
                     pokemons.add(new Shiftry("Shiftry","Grass"));
-                    j1 = new JLabel(new ImageIcon("shiftry.jpg"));
+                    j1 = new JLabel(new ImageIcon("img/shiftry.jpg"));
                 }
                 if(type == 1){
                     pokemons.add(new Lombre("Lombre","Grass"));
-                    j1 = new JLabel(new ImageIcon("lombre.jpg"));
+                    j1 = new JLabel(new ImageIcon("img/lombre.jpg"));
                 }
                 if(type == 2){
                     pokemons.add(new Grookey("Grookey","Grass"));
-                    j1 = new JLabel(new ImageIcon("grookey.jpg"));
+                    j1 = new JLabel(new ImageIcon("img/grookey.jpg"));
                 }
             }
         }
@@ -92,15 +92,15 @@ public class Hatching3 extends JFrame{
                 int type = (int)(Math.random()*3);
                 if(type == 0){
                     pokemons.add(new Kangaskhan("Kangaskhan","Normal"));
-                    j1 = new JLabel(new ImageIcon("kangaskhan.jpg"));
+                    j1 = new JLabel(new ImageIcon("img/kangaskhan.jpg"));
                 }
                 if(type == 1){
                     pokemons.add(new Eevee("Eevee","Normal"));
-                    j1 = new JLabel(new ImageIcon("eevee.jpg"));
+                    j1 = new JLabel(new ImageIcon("img/eevee.jpg"));
                 }
                 if(type == 2){
                     pokemons.add(new Jigglypuff("Jigglypuff","Normal"));
-                    j1 = new JLabel(new ImageIcon("jigglypuff.jpg"));
+                    j1 = new JLabel(new ImageIcon("img/jigglypuff.jpg"));
                 }
             }
         }
