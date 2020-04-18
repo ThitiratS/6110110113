@@ -33,19 +33,19 @@ public class StatusBall extends JFrame {
 
         JLabel j1 = new JLabel(new ImageIcon(""));;
         if(ball.getName() == "Pokeball"){
-            j1 = new JLabel(new ImageIcon("pokeball.jpg"));
+            j1 = new JLabel(new ImageIcon("img/pokeball.jpg"));
         }
         else if(ball.getName() == "Quickball"){
-            j1 = new JLabel(new ImageIcon("quickball.jpg"));
+            j1 = new JLabel(new ImageIcon("img/quickball.jpg"));
         }
         else if(ball.getName() == "Timerball"){
-            j1 = new JLabel(new ImageIcon("timerball.jpg"));
+            j1 = new JLabel(new ImageIcon("img/timerball.jpg"));
         }
         else if(ball.getName() == "Ultraball"){
-            j1 = new JLabel(new ImageIcon("ultraball.jpg"));
+            j1 = new JLabel(new ImageIcon("img/ultraball.jpg"));
         }
         else if(ball.getName() == "Masterball"){
-            j1 = new JLabel(new ImageIcon("masterball.jpg"));
+            j1 = new JLabel(new ImageIcon("img/masterball.jpg"));
         }
         
         j1.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
@@ -108,8 +108,4 @@ public class StatusBall extends JFrame {
     
     
 }
-
-
-
-
 
