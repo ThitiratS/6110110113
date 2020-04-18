@@ -9,5 +9,7 @@ public class Electabuzz extends Pokemon{
         System.out.print("Fight!!! " + name + " attack " + enemy.getName());
         enemy.damage(198);
         System.out.println(" " +enemy.getHp());
+        
     }
+    
 }
