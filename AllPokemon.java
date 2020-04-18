@@ -2,6 +2,7 @@
 import java.util.*;
 
 public class AllPokemon {
+    
     public static ArrayList<Pokemon> getPokemon(int num){
         ArrayList<Pokemon> partner = new ArrayList<Pokemon>();
         if(num < 1){
