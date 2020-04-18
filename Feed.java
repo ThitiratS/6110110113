@@ -1,4 +1,5 @@
 
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -22,7 +23,7 @@ public class Feed extends JFrame {
         p1.setBorder(BorderFactory.createEmptyBorder(14, 14, 14, 14));
         p1.setLayout(new BoxLayout(p1, BoxLayout.Y_AXIS));
         p1.setBackground(Color.pink);
-        JLabel j1 = new JLabel(new ImageIcon("razzberry.jpg"));
+        JLabel j1 = new JLabel(new ImageIcon("img/razzberry.jpg"));
         p1.add(j1);
         JButton b1 = new JButton("RAZZ BERRY");
         b1.add(Box.createRigidArea(new Dimension(223, 23)));
@@ -38,7 +39,7 @@ public class Feed extends JFrame {
         p2.setBorder(BorderFactory.createEmptyBorder(14, 14, 14, 14));
         p2.setLayout(new BoxLayout(p2, BoxLayout.Y_AXIS));
         p2.setBackground(Color.pink);
-        JLabel j2 = new JLabel(new ImageIcon("banana.jpg"));
+        JLabel j2 = new JLabel(new ImageIcon("img/banana.jpg"));
         p2.add(j2);
         JButton b2 = new JButton("NANAB BERRY");
         b2.add(Box.createRigidArea(new Dimension(223, 23)));
@@ -55,7 +56,7 @@ public class Feed extends JFrame {
         p3.setBorder(BorderFactory.createEmptyBorder(14, 14, 14, 14));
         p3.setLayout(new BoxLayout(p3, BoxLayout.Y_AXIS));
         p3.setBackground(Color.pink);
-        JLabel j3 = new JLabel(new ImageIcon("pineapple.jpg"));
+        JLabel j3 = new JLabel(new ImageIcon("img/pineapple.jpg"));
         p3.add(j3);
         JButton b3 = new JButton("PINAP BERRY");
         b3.add(Box.createRigidArea(new Dimension(223, 23)));
@@ -64,19 +65,6 @@ public class Feed extends JFrame {
 			public void actionPerformed(ActionEvent e) { 
                 
                 p.useBerry(pokemon,p);
-                // if(pokemon.getHp() <= pokemon.getMaxHp()){
-                //     // System.out.println(r.getNum());
-                //     // int num = r.getNum()-1;
-                //     // if(num <= 0){
-                //     //     num = 0;
-                //     //     r.setNum(0);
-                        
-                //     // }
-                //     // System.out.println(num);
-                //     // r.setNum(num);
-                //     p.reduceBerry(p);
-                   
-                // }
                 
 			}
 		});
@@ -112,6 +100,4 @@ public class Feed extends JFrame {
         frame.setResizable(false);
     }
     
-
-
 }
