@@ -9,9 +9,6 @@ import java.awt.*;
 
 public class CatchOn extends JFrame {
 
-    /**
-     *
-     */
     private static final long serialVersionUID = 1L;
     private ArrayList<Pokemon> bag;
     private ArrayList<Pokemon> wild;
@@ -85,18 +82,6 @@ public class CatchOn extends JFrame {
         group.add(j3);
         group.add(j4);
         group.add(j5);
-
-        // JPanel radio2 = new JPanel();
-        // ButtonGroup group2 = new ButtonGroup();
-
-        // j6 = new JRadioButton("" + bag.get(0),true);
-        // radio2.add(j6);
-        // group2.add(j6);
-        // for(int j = 1 ; j < bag.size() ; ++j ){
-        //     radio2.add(new JRadioButton(""+bag.get(j),false));
-        //     group2.add(new JRadioButton(""+bag.get(j),false));
-
-        // }
         
         JPanel button = new JPanel();
         JButton btn = new JButton("CATCH");
@@ -109,51 +94,42 @@ public class CatchOn extends JFrame {
 
                     if(j1.isSelected()){
                         
-                        //bag.removeAll(bag);
                         new MyPokemon(wild.get(0),ball);
                         setVisible(false);
                        
                     } else if (j2.isSelected()) {
                         
-                        //bag.removeAll(bag);
                         new MyPokemon(wild.get(1),ball);
                         setVisible(false);
                                        
                     } else if (j3.isSelected()) {
                         
-                        //bag.removeAll(bag);
                         new MyPokemon(wild.get(2), ball);
                         setVisible(false);
                        
                     } else if(j4.isSelected()){ 
                         
-                        //bag.removeAll(bag);
                         new MyPokemon(wild.get(3), ball);
                         setVisible(false);
                        
                     } else if(j5.isSelected()){ 
                         
-                        //bag.removeAll(bag);
                         new MyPokemon(wild.get(4), ball);
                         setVisible(false);
-                        // Pokemon pokemons = partner.get(4);
-                        // bag.add(pokemons);
+                       
     
                     } else if(j5.isSelected()){ 
                         
                         bag.removeAll(bag);
                         new MyPokemon(wild.get(5),ball);
                         setVisible(false);
-                        // Pokemon pokemons = partner.get(4);
-                        // bag.add(pokemons);
+                       
                     }
                 
                 } catch (NullPointerException e) {
-                    System.out.println("No Pokemon");
-                    JOptionPane.showMessageDialog(null,"No Pokemon ");
-                }
-                
-            
+                    //System.out.println("No Pokemon");
+                    JOptionPane.showMessageDialog(null,"No Pokemon");
+                }  
             
             }
 
@@ -173,10 +149,8 @@ public class CatchOn extends JFrame {
         
         c.add(button, BorderLayout.SOUTH);
         c.add(radio1, BorderLayout.WEST);
-        //c.add(radio2, BorderLayout.EAST);
         c.add(head, BorderLayout.NORTH);
-        
-        
+             
         setSize(550, 380);
         //setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
