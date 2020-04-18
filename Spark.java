@@ -5,13 +5,13 @@ public class  Spark implements Posture{
     private String name;
 
     public Spark(String name  ){
+        
         this.name = name;
         this.cp = 15;
     }
 
     public void setName(String name) {
         this.name = name;
-
     }
 
     public String getName() {
@@ -28,7 +28,9 @@ public class  Spark implements Posture{
         
         return cp;
     }
-    public String tosString(){
+    
+    public String toString(){
+        
         return name + " " + cp;
     }
 }
