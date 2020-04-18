@@ -4,7 +4,6 @@ import java.awt.event.*;
 import java.awt.*;
 import java.util.*;
 
-
 public class StatusBerry extends JFrame {
 
     private static final long serialVersionUID = 1L;
@@ -15,8 +14,7 @@ public class StatusBerry extends JFrame {
         super("Profile of you Pokemon");
         Container c = getContentPane();
         JPanel p1 = new JPanel();
-        
-       
+
         Food berry = berries.get(i);
 
         p1.setBorder(BorderFactory.createEmptyBorder(50, 15, 15, 10));
@@ -27,8 +25,6 @@ public class StatusBerry extends JFrame {
   
         p1.add(b1);
         p1.add(b2);
-       
-        
 
         JLabel j1 = new JLabel(new ImageIcon(""));;
         if(berry.getType() == "RAZZ BERRY"){
@@ -40,12 +36,8 @@ public class StatusBerry extends JFrame {
         else if(berry.getType() == "PINAP BERRY"){
             j1 = new JLabel(new ImageIcon("img/pineapple.jpg"));
         }
-        
-        
+
         j1.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-
-
-        
 
         JPanel p3 = new JPanel();
         p3.setBorder(BorderFactory.createEmptyBorder(10, 265, 15, 10));
@@ -60,19 +52,16 @@ public class StatusBerry extends JFrame {
         
         p3.add(button2);
         button2.add(Box.createRigidArea(new Dimension(40, 18)));
-        
-        
-       
+
         button2.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) {
-                
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) { 
                 setVisible(false);
             }
-		});
+	});
         button1.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) { 
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) { 
                 
                 i++;
                 try {
@@ -85,21 +74,18 @@ public class StatusBerry extends JFrame {
                     setVisible(false);
                     //t.getMessage();
                 }
-			}
-		});
-        
+	    }
+	});
 
-       
         c.add(j1, BorderLayout.WEST);
         c.add(p1, BorderLayout.CENTER);		
         c.add(p3, BorderLayout.SOUTH);
 
         setSize(720, 350);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);	
         setResizable(false);
         
     }
-    
-    
+
 }
