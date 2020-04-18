@@ -25,7 +25,7 @@ public class AquaJet implements Posture {
         return cp;
     }
     
-    public String tosString(){
+    public String toString(){
         return name + " " + cp;
     }
     
