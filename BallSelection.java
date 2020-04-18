@@ -6,36 +6,24 @@ import java.awt.*;
 
 public class BallSelection extends JFrame {
 
-    /**
-     *
-     */
     private static final long serialVersionUID = 1L;
     private ArrayList<Pokemon> bag;
     private ArrayList<PokemonBall> balls;
-    //private ArrayList<Food> berry;
     
     public BallSelection(Pokemon wildPokemon, Pokemon myPokemon, ArrayList<Pokemon> bag, ArrayList<PokemonBall> ball){
 
         super("Select balls");
         this.bag = bag;
         Container c = getContentPane();
-        //ball2 = Bag.ball;
+       
         Partner p = new Partner();
         balls = new ArrayList<PokemonBall>();
         
         for(PokemonBall b2 : Bag.ball){
             balls.add(b2);
         }
-        System.out.println(Bag.ball);
-        System.out.println(balls);
-        // Pokeball pokeball = new Pokeball("Pokeball");
-        // Quickball quickball = new Quickball("Quickball");
-        // Timerball timerball = new Timerball("Timerball");
-        // Ultraball ultraball = new Ultraball("Ultraball");
-        // Masterball masterball = new Masterball("Masterball");
         
-       
-        System.out.println(balls);
+        //System.out.println(balls);
 
         JPanel head = new JPanel();
         JLabel k1 = new JLabel("Select Your Balls ", JLabel.CENTER);
@@ -82,16 +70,7 @@ public class BallSelection extends JFrame {
         btn2.addActionListener(new ActionListener(){
 			//anonymous class
 			public void actionPerformed(ActionEvent e) {
-                // int ballNum = quickball.getNum()-1;
-                // quickball.setNum(ballNum);
-                // if(quickball.getNum() != 0){
-                //     p.deleteBall(quickball);
-                //     checkWin(wildPokemon, myPokemon, quickball);
-                //     setVisible(false);
-                // }
-                // else {
-                //     new BallSelection( wildPokemon, myPokemon, bag);
-                // }
+             
                 for(int i = 0 ; i < balls.size() ; ++i ){
                     if(balls.get(i).getName()=="Quickball"){
                         if(balls.get(i).getNum()!= 0){
@@ -121,16 +100,7 @@ public class BallSelection extends JFrame {
         btn3.addActionListener(new ActionListener() {
            
             public void actionPerformed(ActionEvent arg0) {
-                // int ballNum = timerball.getNum()-1;
-                // timerball.setNum(ballNum);
-                // if(timerball.getNum() != 0){
-                //     p.deleteBall(timerball);
-                //     checkWin(wildPokemon, myPokemon, timerball);
-                //     setVisible(false);
-                // }
-                // else {
-                //     new BallSelection( wildPokemon, myPokemon, bag);
-                // }
+               
                 for(int i = 0 ; i < balls.size() ; ++i ){
                     if(balls.get(i).getName()=="Timerball"){
                         if(balls.get(i).getNum()!= 0){
@@ -155,16 +125,7 @@ public class BallSelection extends JFrame {
            
 
             public void actionPerformed(ActionEvent arg0) {
-                // int ballNum = ultraball.getNum()-1;
-                // ultraball.setNum(ballNum);
-                // if(ultraball.getNum() != 0){
-                //     p.deleteBall(ultraball);
-                //     checkWin(wildPokemon, myPokemon, ultraball);
-                //     setVisible(false);
-                // }
-                // else {
-                //     new BallSelection( wildPokemon, myPokemon, bag);
-                // }
+              
                 for(int i = 0 ; i < balls.size() ; ++i ){
                     if(balls.get(i).getName()=="Ultraball"){
                         if(balls.get(i).getNum()!= 0){
@@ -194,16 +155,6 @@ public class BallSelection extends JFrame {
 
             public void actionPerformed(ActionEvent arg0) {
     
-                // int ballNum = masterball.getNum()-1;
-                // masterball.setNum(ballNum);
-                // if(masterball.getNum() != 0){
-                //     p.deleteBall(masterball);
-                //     checkWin(wildPokemon, myPokemon, masterball);
-                //     setVisible(false);
-                // }
-                // else {
-                //     new BallSelection(wildPokemon, myPokemon, bag);
-                // }
                 for(int i = 0 ; i < balls.size() ; ++i ){
                     if(balls.get(i).getName()=="Masterball"){
                         if(balls.get(i).getNum()!= 0){
@@ -234,12 +185,7 @@ public class BallSelection extends JFrame {
 
         button1.add(btn5);
         
-       
-        // b1.add(button2);
-        // b1.add(button1);
-
         c.add(head, BorderLayout.NORTH);
-        //c.add(b1, BorderLayout.SOUTH);
         c.add(button1, BorderLayout.CENTER);
    
         setSize(400, 420);
@@ -247,7 +193,6 @@ public class BallSelection extends JFrame {
         setVisible(true);
     }
     public void checkWin(Pokemon wildPokemon,Pokemon myPokemon,PokemonBall b){
-        //PokemonBall b = balls.get(no);
         
         int value = ((3*wildPokemon.getMaxHp()) - (2*wildPokemon.getHp())+(3*myPokemon.getMaxHp()) -(2*myPokemon.getHp()) )* b.getRate() * 100 / 10 * (3*wildPokemon.getMaxHp());
         if(value > 50 ){
@@ -256,20 +201,20 @@ public class BallSelection extends JFrame {
             m.playgui(wildPokemon,bag);
             int exp = myPokemon.getExp()+60;
             myPokemon.setExp(exp);
-                // MyName m = new MyName();
-                // m.playgui();
             myPokemon.upLevel(myPokemon);
             myPokemon.upPokemon(myPokemon);
-            
-            
+               
         }
+
         else{
             System.out.println("You failed to catch");
+            JOptionPane.showMessageDialog(null,"You failed to catch");
             new BallSelection( wildPokemon, myPokemon, bag, balls);
             int exp = myPokemon.getExp()+20;
             myPokemon.setExp(exp);
             myPokemon.upLevel(myPokemon);
             myPokemon.upPokemon(myPokemon);
+   
         }
     }
 }
