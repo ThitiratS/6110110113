@@ -32,13 +32,13 @@ public class StatusBerry extends JFrame {
 
         JLabel j1 = new JLabel(new ImageIcon(""));;
         if(berry.getType() == "RAZZ BERRY"){
-            j1 = new JLabel(new ImageIcon("razzberry.jpg"));
+            j1 = new JLabel(new ImageIcon("img/razzberry.jpg"));
         }
         else if(berry.getType() == "NANAB BERRY"){
-            j1 = new JLabel(new ImageIcon("banana.jpg"));
+            j1 = new JLabel(new ImageIcon("img/banana.jpg"));
         }
         else if(berry.getType() == "PINAP BERRY"){
-            j1 = new JLabel(new ImageIcon("pineapple.jpg"));
+            j1 = new JLabel(new ImageIcon("img/pineapple.jpg"));
         }
         
         
@@ -103,8 +103,3 @@ public class StatusBerry extends JFrame {
     
     
 }
-
-
-
-
-
