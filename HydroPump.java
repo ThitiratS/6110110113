@@ -5,13 +5,14 @@ public class HydroPump  implements Posture {
     private String name;
 
     public HydroPump(String name){
+        
         this.name = name;
         this.cp = 40;
     }
 
     public void setName(String name) {
+        
         this.name = name;
-
     }
 
     public String getName() {
@@ -28,7 +29,9 @@ public class HydroPump  implements Posture {
         
         return cp;
     }
+    
     public String tosString(){
+        
         return name + " " + cp;
     }
 }
