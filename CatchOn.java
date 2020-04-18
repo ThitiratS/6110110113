@@ -50,20 +50,24 @@ public class CatchOn extends JFrame {
         
         JPanel head = new JPanel();
         head.setLayout(new BoxLayout(head, BoxLayout.Y_AXIS));
+	    
         JLabel k1 = new JLabel("Pokemon Catching ",JLabel.CENTER);
         head.setBorder(BorderFactory.createEmptyBorder(20, 95, 10, 10));
-		k1.setFont(myFont.deriveFont(Font.BOLD,35f));
+	k1.setFont(myFont.deriveFont(Font.BOLD,35f));
         k1.setForeground(Color.BLUE);
+	    
         JLabel k2 = new JLabel("Select wild pokemon ",JLabel.CENTER);
         k2.setBorder(BorderFactory.createEmptyBorder(20, 60, 10, 10));
-		k2.setFont(myFont2.deriveFont(Font.BOLD,20f));
+	k2.setFont(myFont2.deriveFont(Font.BOLD,20f));
         k2.setForeground(Color.magenta);
+	    
         head.add(k1);
         head.add(k2);
 
         JPanel radio1 = new JPanel();
         radio1.setBorder(BorderFactory.createEmptyBorder(10, 90, 10, 30));
         radio1.setLayout(new BoxLayout(radio1, BoxLayout.Y_AXIS));
+	    
         j1 = new JRadioButton(""+ wild.get(0),true);
         j2 = new JRadioButton(""+ wild.get(1),false);
         j3 = new JRadioButton(""+ wild.get(2),false);
@@ -89,7 +93,7 @@ public class CatchOn extends JFrame {
         btn.add(Box.createRigidArea(new Dimension(240, 20)));
         btn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-               
+             
                 try {
 
                     if(j1.isSelected()){
@@ -137,8 +141,8 @@ public class CatchOn extends JFrame {
         JButton btn2 = new JButton("RUN");
         btn2.add(Box.createRigidArea(new Dimension(240, 20)));
         btn2.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) {
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) {
                
                 setVisible(false);
                
