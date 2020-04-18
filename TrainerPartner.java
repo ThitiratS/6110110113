@@ -1,7 +1,4 @@
 
-
-
-
 import javax.swing.*;
 import java.util.*;
 import java.awt.event.*;
@@ -9,9 +6,6 @@ import java.awt.*;
 
 public class TrainerPartner extends JFrame {
 
-    /**
-     *
-     */
     private static final long serialVersionUID = 1L;
     private ArrayList<Actor> actors;
     private JRadioButton j1,j2;
@@ -28,7 +22,7 @@ public class TrainerPartner extends JFrame {
         JPanel head = new JPanel();
         JLabel k1 = new JLabel("Pokemon Hatching ", JLabel.CENTER);
         head.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-		k1.setFont(k1.getFont().deriveFont(Font.BOLD,35f));
+	k1.setFont(k1.getFont().deriveFont(Font.BOLD,35f));
         head.setForeground(Color.BLACK);
         head.setBackground(Color.PINK);
         head.add(k1);
@@ -40,11 +34,7 @@ public class TrainerPartner extends JFrame {
         JLabel k2 = new JLabel( " " + p.satochiBall());
         radio1.add(j1);
         radio1.add(k2);
-        
-        // JPanel radio2 = new JPanel();
-       
-        // radio2.setBorder(BorderFactory.createEmptyBorder(50, 0, 10, 30));
-        // radio2.setLayout(new BoxLayout(radio2, BoxLayout.Y_AXIS));
+
         j2 = new JRadioButton(""+ actors.get(1),false);
         JLabel k3 = new JLabel(" "+p.hikariBall());
         radio1.add(j2);
@@ -53,7 +43,6 @@ public class TrainerPartner extends JFrame {
         ButtonGroup group = new ButtonGroup();
         group.add(j1);
         group.add(j2);
-        
 
         JPanel button = new JPanel();
         JButton btn = new JButton("SELECT");
@@ -88,8 +77,8 @@ public class TrainerPartner extends JFrame {
         JButton btn2 = new JButton("CANCLE");
         btn2.add(Box.createRigidArea(new Dimension(290, 20)));
         btn2.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) {
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) {
                 setVisible(false);
             }
         });
@@ -98,7 +87,6 @@ public class TrainerPartner extends JFrame {
         
         c.add(button, BorderLayout.SOUTH);
         c.add(radio1, BorderLayout.WEST);
-        // c.add(radio2, BorderLayout.EAST);
         c.add(head, BorderLayout.NORTH);
         
         
