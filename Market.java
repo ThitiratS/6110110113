@@ -1,4 +1,5 @@
 
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -10,16 +11,15 @@ public class Market extends JFrame {
 
     private static final long serialVersionUID = 1L;
     private ArrayList<PokemonBall> balls;
-    private ArrayList<PokemonBall> bs;
+    
     
 
     public Market(RazzBerry r, Banana b, Pineapple p, ArrayList<PokemonBall> ball2)  {
         
         super("Pokemon Market");
         balls = new ArrayList<PokemonBall>();
-        bs = new ArrayList<PokemonBall>();
+      
         
-        //myFrame.setLayout(null);
         System.out.println(ball2);
         Container c = getContentPane();
         Pokeball pokeball = new Pokeball("Pokeball");
@@ -69,9 +69,7 @@ public class Market extends JFrame {
             }
 
         }
-        // for(PokemonBall b2 : ball2){
-        //     balls.add(b2);
-        // }
+     
 
         System.out.println(balls);
         Font myFont = null;
@@ -100,9 +98,7 @@ public class Market extends JFrame {
         b1.addActionListener(new ActionListener(){
 			//anonymous class
 			public void actionPerformed(ActionEvent e) {   
-                // int berry = r.getNum()+1;
-                // r.setNum(berry);
-                // System.out.println("RazzBerry add : " + berry);
+               
                 addBerry(r);
 			}
         });
@@ -111,9 +107,7 @@ public class Market extends JFrame {
         b2.addActionListener(new ActionListener(){
 			//anonymous class
 			public void actionPerformed(ActionEvent e) {   
-                // int berry = b.getNum()+1;
-                // b.setNum(berry);
-                // System.out.println("RazzBerry add : " + berry);
+                
                 addBerry(b);
                 
 			}
@@ -122,9 +116,7 @@ public class Market extends JFrame {
         b3.addActionListener(new ActionListener(){
 			//anonymous class
 			public void actionPerformed(ActionEvent e) {   
-                // int berry = p.getNum()+1;
-                // p.setNum(berry);
-                // System.out.println("RazzBerry add : " + berry);
+               
                 addBerry(p);
 			}
         });
@@ -138,7 +130,7 @@ public class Market extends JFrame {
         });
 
        
-        JLabel j1 = new JLabel(new ImageIcon("fruit.jpg"));
+        JLabel j1 = new JLabel(new ImageIcon("img/fruit.jpg"));
        
         
         JPanel p3 = new JPanel ( );
@@ -169,29 +161,10 @@ public class Market extends JFrame {
         b4.addActionListener(new ActionListener(){
 			//anonymous class
 			public void actionPerformed(ActionEvent e) {   
-                // int ballNum = pokeball.getNum()+1;
-                // pokeball.setNum(ballNum);
-                // System.out.println("Pokeball" + ballNum + " balls");
-                int num = 0;
-                // for(int i = 0 ; i < balls.size() ; ++i ){
-                //     if(balls.get(i).getName() == "Pokeball"){
-                //         addBall(balls.get(i));
-                //         num = balls.get(i).getNum();
-                        
-                //         pokeball.setNum(num);
-                        
-                //     }
-                    
-                // }
-                // num = pokeball.getNum() ;
-                if(num == 0){
-                    
-                   
-                }
+               
                 addBall(pokeball);
                 System.out.println(pokeball);
-                // bs.remove(pokeball);
-                // bs.add(pokeball);
+               
                 
 			}
         });
@@ -202,25 +175,7 @@ public class Market extends JFrame {
         b5.addActionListener(new ActionListener(){
 			//anonymous class
 			public void actionPerformed(ActionEvent e) {   
-                // int ballNum = quickball.getNum()+1;
-                // quickball.setNum(ballNum);
-                // System.out.println("Quickball" + ballNum + " balls");
-                // int num = 0;
-                // for(PokemonBall pokemonBall : balls){
-                //     if(pokemonBall.getName() == "Quickball"){
-                //         addBall(pokemonBall);
-                //         quickball.setNum(num);
-                        
-                //     }
-                    
-                // }
-                // // num = pokeball.getNum() ;
-                // if(num == 0){
-                //     addBall(quickball);
-                   
-                // }
-                // bs.remove(quickball);
-                // bs.add(quickball);
+               
                 addBall(quickball);
                 System.out.println(quickball);
 			}
@@ -231,25 +186,7 @@ public class Market extends JFrame {
         b6.addActionListener(new ActionListener(){
 			//anonymous class
 			public void actionPerformed(ActionEvent e) {   
-                // int ballNum = timerball.getNum()+1;
-                // timerball.setNum(ballNum);
-                // System.out.println("Timerball " + ballNum + " balls");
-                // int num = 0;
-                // for(PokemonBall pokemonBall : balls){
-                //     if(pokemonBall.getName() == "Timerball"){
-                //         addBall(pokemonBall);
-                //         timerball.setNum(num);
-                        
-                //     }
-                    
-                // }
-                // // num = pokeball.getNum() ;
-                // if(num == 0){
-                //     addBall(timerball);
-                   
-                // }
-                // bs.remove(masterball);
-                // bs.add(timerball);
+              
                 addBall(timerball);
                 System.out.println(timerball);
 			}
@@ -260,25 +197,7 @@ public class Market extends JFrame {
         b7.addActionListener(new ActionListener(){
 			//anonymous class
 			public void actionPerformed(ActionEvent e) {   
-                // int ballNum = ultraball.getNum()+1;
-                // ultraball.setNum(ballNum);
-                // System.out.println("Ultraball " + ballNum + " balls");
-                // int num = 0;
-                // for(PokemonBall pokemonBall : balls){
-                //     if(pokemonBall.getName() == "Ultraball"){
-                //         addBall(pokemonBall);
-                //         ultraball.setNum(num);
-                        
-                //     }
-                    
-                // }
-                // // num = pokeball.getNum() ;
-                // if(num == 0){
-                //     addBall(ultraball);
-                   
-                // }
-                // bs.remove(ultraball);
-                // bs.add(ultraball);
+               
                 addBall(ultraball);
                 System.out.println(ultraball);
 			}
@@ -289,34 +208,13 @@ public class Market extends JFrame {
         b8.addActionListener(new ActionListener(){
 			//anonymous class
 			public void actionPerformed(ActionEvent e) {   
-                // int ballNum = masterball.getNum()+1;
-                // masterball.setNum(ballNum);
-                // System.out.println("Masterball " + ballNum + " balls");
-                // int num = 0;
-                // for(PokemonBall pokemonBall : balls){
-                //     if(pokemonBall.getName() == "Masterball"){
-                //         addBall(pokemonBall);
-                //         masterball.setNum(num);
-                        
-                //     }
-                    
-                // }
-                // // num = pokeball.getNum() ;
-                // if(num == 0){
-                //     addBall(masterball);
-                   
-                // }
-                // bs.remove(masterball);
-                // bs.add(masterball);
+                
                 addBall(masterball);
                 System.out.println(masterball);
             }
            
         });
        
-        
-        Bag.ball = bs;
-        System.out.println(bs);
         JButton d2 = new JButton("CLOSE");
         d2.addActionListener(new ActionListener(){
 			//anonymous class
@@ -345,7 +243,7 @@ public class Market extends JFrame {
         p4.add(b7);
         p4.add(b8);
 
-        JLabel j2 = new JLabel(new ImageIcon("ball.jpg"));
+        JLabel j2 = new JLabel(new ImageIcon("img/ball.jpg"));
 
         panel2.add ( pk2, BorderLayout.NORTH );
         panel2.add ( p4, BorderLayout.EAST );
@@ -375,9 +273,6 @@ public class Market extends JFrame {
         
     }
 
-    // public static void main ( String [] args ){
-    //     new Market();
-    // }
     public void addBerry(Food food){
         int berry = food.getNum()+1;
         food.setNum(berry);
@@ -391,3 +286,4 @@ public class Market extends JFrame {
     }
 
 }
+
