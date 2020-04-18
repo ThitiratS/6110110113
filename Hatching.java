@@ -96,7 +96,7 @@ public class Hatching extends JFrame {
         j2.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         
         JLabel k3 = new JLabel("Female Pokemon " + female.getName(), JLabel.CENTER);
-		k3.setFont(myFont2.deriveFont(Font.BOLD,18f));
+	k3.setFont(myFont2.deriveFont(Font.BOLD,18f));
         k3.setForeground(Color.RED);
 
         p4.add(j2);
