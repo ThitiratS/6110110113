@@ -5,13 +5,14 @@ public class Thunder implements Posture{
     private String name;
 
     public Thunder(String name  ){
+        
         this.name = name;
         this.cp = 23;
     }
 
     public void setName(String name) {
+        
         this.name = name;
-
     }
 
     public String getName() {
@@ -28,7 +29,9 @@ public class Thunder implements Posture{
         
         return cp;
     }
-    public String tosString(){
+    
+    public String toString(){
+        
         return name + " " + cp;
     }
 }
