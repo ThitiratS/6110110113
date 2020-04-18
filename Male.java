@@ -14,7 +14,6 @@ public class Male extends JFrame {
     private String no;
     private ArrayList<Pokemon> bag;
 
-    
     public Male(ArrayList<Pokemon> male,ArrayList<Pokemon> female,ArrayList<Pokemon> bags){
         
         super("Male Pokemon");
@@ -27,8 +26,8 @@ public class Male extends JFrame {
         for(Pokemon b : male){
             bag.add(b);
         }
-        System.out.println(bag);
-        //setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+	    
+        //System.out.println(bag);
         getContentPane().setLayout(null);
         
         jLabel1.setText("Male Pokemon Number");
@@ -42,8 +41,8 @@ public class Male extends JFrame {
         btnClick.setText("Click");
 
         btnClick.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) { 
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) { 
                
                 try {
                     no = txtName.getText();
@@ -62,33 +61,18 @@ public class Male extends JFrame {
                 } catch (NumberFormatException evt) {
                     new Male(male, female, bags);
                 }
-                
-                
-                //btnClickActionPerformed(e);
+
                 setVisible(false);
                 
-			}
-		});
+	    }
+	});
 
         getContentPane().add(btnClick);
         btnClick.setBounds(160, 140, 90, 23);
         setSize(400, 300);
-		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setVisible(true);
-        
+	//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);   
         
     }
-    // private void btnClickActionPerformed(ActionEvent evt) {   
-                                     
-        
-    // } 
-
-    // public void playgui(Pokemon wildPokemon,ArrayList<Pokemon> bags) {
-    //     Mine frame = new Mine(wildPokemon,bags);
-    //     frame.setSize(400, 300);
-	// 	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    //     frame.setVisible(true);
-    //     frame.setResizable(false);
-    // }
 
 }
