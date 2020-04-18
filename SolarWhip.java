@@ -5,13 +5,14 @@ public class SolarWhip implements Posture {
     private String name;
 
     public SolarWhip(String name){
+        
         this.name = name;
         this.cp = 45;
     }
 
     public void setName(String name) {
+        
         this.name = name;
-
     }
 
     public String getName() {
@@ -28,7 +29,9 @@ public class SolarWhip implements Posture {
         
         return cp;
     }
-    public String tosString(){
+    
+    public String toString(){
+        
         return name + " " + cp;
     }
 }
