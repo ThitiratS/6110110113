@@ -32,7 +32,8 @@ public class Hatching extends JFrame {
         }
         JPanel p1 = new JPanel();
         JLabel k1 = new JLabel("Pokemon Hatching ", JLabel.CENTER);
-		k1.setFont(myFont.deriveFont(Font.BOLD,30f));
+	
+	k1.setFont(myFont.deriveFont(Font.BOLD,30f));
         k1.setForeground(Color.BLACK);
         p1.add(k1);
 
@@ -60,16 +61,13 @@ public class Hatching extends JFrame {
             new Pair(partners);
         }
         j1.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        
-      
+          
         JLabel k2 = new JLabel(" Male Pokemon " + male.getName(), JLabel.CENTER);
-		k2.setFont(myFont2.deriveFont(Font.BOLD,18f));
+	k2.setFont(myFont2.deriveFont(Font.BOLD,18f));
         k2.setForeground(Color.BLUE);
 
         p2.add(j1);
         p2.add(k2);
-        
-
 
         JPanel p4 = new JPanel();
         p4.setBorder(BorderFactory.createEmptyBorder(14, 50, 14, 50));
@@ -97,12 +95,9 @@ public class Hatching extends JFrame {
         }
         j2.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         
-
-        
         JLabel k3 = new JLabel("Female Pokemon " + female.getName(), JLabel.CENTER);
 		k3.setFont(myFont2.deriveFont(Font.BOLD,18f));
         k3.setForeground(Color.RED);
-        
 
         p4.add(j2);
         p4.add(k3);
@@ -111,14 +106,12 @@ public class Hatching extends JFrame {
         b1.add(Box.createRigidArea(new Dimension(223, 23)));
         b1.add(Box.createRigidArea(new Dimension(223, 23)));
         b1.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) {
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) {
                 new Hatching2(male,female,partners);
                 setVisible(false);
             }
-		});
-
-        
+	});
 
         c.add(p1, BorderLayout.NORTH);
         c.add(p2, BorderLayout.WEST);
@@ -126,7 +119,7 @@ public class Hatching extends JFrame {
         c.add(b1,BorderLayout.SOUTH);
         pack();
         setSize(800, 470);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);	
         //setResizable(false);
     }
