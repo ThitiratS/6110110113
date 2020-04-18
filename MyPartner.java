@@ -6,16 +6,10 @@ import java.awt.*;
 
 public class MyPartner extends JFrame {
 
-    /**
-     *
-     */
     private static final long serialVersionUID = 1L;
     private ArrayList<Pokemon> bag;
     private JRadioButton j1,j2,j3,j4;
-    // public static void main(String[] args){
-    //     new MainGame();
-        
-    // }
+ 
     public MyPartner(){
         
         super("Pokemon Game");
@@ -27,7 +21,7 @@ public class MyPartner extends JFrame {
         JPanel head = new JPanel();
         JLabel k1 = new JLabel("Pokemon partner ", JLabel.CENTER);
         head.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-		k1.setFont(k1.getFont().deriveFont(Font.BOLD,35f));
+	k1.setFont(k1.getFont().deriveFont(Font.BOLD,35f));
         
         head.setBackground(Color.BLACK);
         k1.setForeground(Color.ORANGE);
@@ -63,9 +57,8 @@ public class MyPartner extends JFrame {
 
                 if(j1.isSelected()){
                     bag.removeAll(bag);
-                    System.out.println(Bag.ball);
+                    //System.out.println(Bag.ball);
                     Pokemon pokemonPartner = partner.get(0);
-                   
                     JOptionPane.showMessageDialog(null,"Your Pokemon : " + partner.get(0));
                     //bag.add(pokemonPartner);
                     MyName frame = new MyName(pokemonPartner,bag);
@@ -77,7 +70,7 @@ public class MyPartner extends JFrame {
                 } else if (j2.isSelected()) {
                     bag.removeAll(bag);
                     Pokemon pokemonPartner = partner.get(1);
-                    System.out.println(Bag.ball);
+                    //System.out.println(Bag.ball);
                     JOptionPane.showMessageDialog(null,"Your Pokemon : "+ partner.get(1));
                     //bag.add(pokemonPartner);
                     MyName frame = new MyName(pokemonPartner,bag);
@@ -87,7 +80,6 @@ public class MyPartner extends JFrame {
                 } else if (j3.isSelected()) {
                     bag.removeAll(bag);
                     Pokemon pokemonPartner = partner.get(2);
-                   
                     JOptionPane.showMessageDialog(null,"Your Pokemon : "+ partner.get(2));
                     //bag.add(pokemonPartner);
                     MyName frame = new MyName(pokemonPartner,bag);
@@ -98,7 +90,6 @@ public class MyPartner extends JFrame {
                 } else if(j4.isSelected()){ 
                     bag.removeAll(bag);
                     Pokemon pokemonPartner = partner.get(3);
-                    
                     JOptionPane.showMessageDialog(null,"Your Pokemon : "+ partner.get(3));
                     //bag.add(pokemonPartner);
                     MyName frame = new MyName(pokemonPartner,bag);
@@ -113,8 +104,8 @@ public class MyPartner extends JFrame {
         JButton btn2 = new JButton("CANCLE");
         btn2.add(Box.createRigidArea(new Dimension(240, 20)));
         btn2.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) {
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) {
                 
                 setVisible(false);
                 
