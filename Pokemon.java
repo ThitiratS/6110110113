@@ -7,9 +7,7 @@ public abstract class Pokemon {
     private String myName;
     private String type;
     private String level ;
-    //private int levelExp;
     private int exp;
-    //private String maxLevel;
     private String gender;
 
     
@@ -20,9 +18,9 @@ public abstract class Pokemon {
         this.hp = 0;
         this.level = "level 1";
         this.exp = 0;
-        
-        
+
     }
+    
     public Pokemon(String name,String type,int maxHP){
         this.name = name;
         this.type = type;
@@ -33,6 +31,7 @@ public abstract class Pokemon {
         this.gender = getGender();
         
     }
+    
     public void setMyName(String myName){
         this.myName = myName;
     }
@@ -68,9 +67,11 @@ public abstract class Pokemon {
     public int getMaxHp(){
         return maxHP;
     }
+    
     public String getLevel(){
         return level;
     }
+    
     public void setLevel(String level){
         this.level = level;
     }
@@ -209,18 +210,6 @@ public abstract class Pokemon {
     public String toString(){
         return "Pokemon : " + name + " Type : "+ type + " HP : " + hp + " " + gender;
     }
-    
- 
-    // public void setHP() 
-    // {
-    //     if(hp <= 0)
-    //     {
-    //         System.out.println("Faint!");
-    //         eatberry();
-    //     }
-    // }
-    
-
 
 }
 
