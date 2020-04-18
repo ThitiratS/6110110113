@@ -123,38 +123,6 @@ public class Hatching3 extends JFrame{
             }
             
         }
-        //Trainer.bag = partners;
-       
-        // if(male.getType() == "Normal" && female.getType() == "Grass" || female.getType() == "Normal" && male.getType() == "Grass"  ){
-        //     for(int i =0 ; i < 1 ;++i){
-        //         int type = (int)(Math.random()*3);
-        //         if(type == 0){
-        //             pokemons.add(new Kangaskhan("Kangaskhan","Normal"));
-        //             j1 = new JLabel(new ImageIcon("kangaskhan.jpg"));
-        //         }
-        //         if(type == 1){
-        //             pokemons.add(new Eevee("Eevee","Normal"));
-        //             j1 = new JLabel(new ImageIcon("eevee.jpg"));
-        //         }
-        //         if(type == 2){
-        //             pokemons.add(new Jigglypuff("Jigglypuff","Normal"));
-        //             j1 = new JLabel(new ImageIcon("jigglypuff.jpg"));
-        //         }
-        //         if(type == 3){
-        //             pokemons.add(new Shiftry("Shiftry","Grass"));
-        //             j1 = new JLabel(new ImageIcon("shiftry.jpg"));
-        //         }
-        //         if(type == 4){
-        //             pokemons.add(new Lombre("Lombre","Grass"));
-        //             j1 = new JLabel(new ImageIcon("lombre.jpg"));
-        //         }
-        //         if(type == 5){
-        //             pokemons.add(new Grookey("Grookey","Grass"));
-        //             j1 = new JLabel(new ImageIcon("grookey.jpg"));
-        //         }
-        //     }
-        // }
-        
         
         j1.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
@@ -180,16 +148,12 @@ public class Hatching3 extends JFrame{
         c.add(j1, BorderLayout.CENTER);
         c.add(b1, BorderLayout.SOUTH);
 
+        Bag.bag = partners;
         
         setSize(600, 450);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);	
-        Bag.bag = partners;
         
-
     }
-
-
-    
 
 }
