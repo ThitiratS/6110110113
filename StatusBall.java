@@ -50,9 +50,6 @@ public class StatusBall extends JFrame {
         
         j1.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
-
-        
-
         JPanel p3 = new JPanel();
         p3.setBorder(BorderFactory.createEmptyBorder(10, 265, 15, 10));
         p3.setLayout(new BoxLayout(p3, BoxLayout.X_AXIS));
@@ -66,18 +63,15 @@ public class StatusBall extends JFrame {
         
         p3.add(button2);
         button2.add(Box.createRigidArea(new Dimension(40, 18)));
-        
-        
-       
         button2.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) {
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) {
                 setVisible(false);
             }
-		});
+	});
         button1.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) { 
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) { 
                 
                 i++;
                 try {
@@ -90,17 +84,15 @@ public class StatusBall extends JFrame {
                     setVisible(false);
                     //t.getMessage();
                 }
-			}
-		});
-        
+	    }
+	});
 
-       
         c.add(j1, BorderLayout.WEST);
         c.add(p1, BorderLayout.CENTER);		
         c.add(p3, BorderLayout.SOUTH);
 
         setSize(720, 350);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);	
         setResizable(false);
         
