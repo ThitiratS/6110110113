@@ -5,13 +5,12 @@ public class Banana extends Food {
     }
    
     public void useBerry(Pokemon pokemon,Food food){
-        
-        
+             
         int hp = pokemon.getHp();
         int currentHp = 0;
         if(hp < pokemon.getMaxHp() || hp > pokemon.getMaxHp() ){
             reduceBerry(food);
-            System.out.println("BANAB BERRY left "+food.getNum());
+            //System.out.println("BANAB BERRY left "+food.getNum());
         }
         hp = pokemon.getHp()+80;
         if(hp >= pokemon.getMaxHp()){
@@ -22,7 +21,7 @@ public class Banana extends Food {
             currentHp = hp;
         }
         pokemon.setHp(currentHp);    
-        System.out.println("HP : " + pokemon.getHp());
+        //System.out.println("HP : " + pokemon.getHp());
         
     }
 
@@ -38,7 +37,5 @@ public class Banana extends Food {
         
         food.setNum(num);
     }
-
-
 
 }
