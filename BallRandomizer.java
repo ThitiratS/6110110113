@@ -9,7 +9,6 @@ public class BallRandomizer {
             return pokemonballs;
         }
         
-
         for(int i = 0 ; i < num; ++i){
             int type = (int)(Math.random()*5);
             if (type == 0){
