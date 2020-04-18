@@ -9,9 +9,7 @@ import java.net.URL;
 import java.util.*;
 
 public class Hatching2 extends JFrame {
-    /**
-     *
-     */
+    
     private static final long serialVersionUID = 1L;
 
     public Hatching2(Pokemon male,Pokemon female,ArrayList<Pokemon> partners) {
@@ -52,19 +50,19 @@ public class Hatching2 extends JFrame {
         b1.add(Box.createRigidArea(new Dimension(245, 25)));
         b1.setFont(b1.getFont().deriveFont(Font.ITALIC,18.0f));
         b1.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) {
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) {
                 new Hatching3(male, female,partners);
                 setVisible(false);
             }
-		});
+	});
 
         JButton b2 = new JButton("CANCLE");
         b2.add(Box.createRigidArea(new Dimension(245, 25)));
         b2.setFont(b2.getFont().deriveFont(Font.ITALIC,18.0f));
         b2.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) {
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) {
                 setVisible(false);
             }
         });
@@ -89,18 +87,5 @@ public class Hatching2 extends JFrame {
         setResizable(false);
 
     }
-    // public void hatchEgg(){
-
-      
-    // }
-    // public static void main ( String [] args ){
-    //     Hatching2 frame = new Hatching2();
-
-    //     frame.setSize(600, 620);
-    //     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    //     frame.setVisible(true);
-    //     frame.setResizable(false);
-       
-    // }
 
 }
