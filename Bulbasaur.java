@@ -12,7 +12,7 @@ public class Bulbasaur extends Pokemon {
     public void attack(Pokemon enemy){
         System.out.print("Fight!!! " + name + " attack " + enemy.getName());
         enemy.usePosture(enemy);
-        System.out.println(" " +enemy.getHp());
+        System.out.println(" " + enemy.getHp());
     }
 
 }
