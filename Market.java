@@ -3,6 +3,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.*;
 
 public class Market extends JFrame {
@@ -28,6 +30,7 @@ public class Market extends JFrame {
         timerball.setNum(0);
         ultraball.setNum(0);
         masterball.setNum(0);
+	    
         balls.add(pokeball);
         balls.add(quickball);
         balls.add(timerball);
@@ -39,34 +42,37 @@ public class Market extends JFrame {
                 int num = ball.getNum();
                 pokeball.setNum(num);
                 
-                System.out.println(balls);
+                //System.out.println(balls);
                 
             } else if (ball.getName() == "Quickball") {
                 int num = ball.getNum();
                 quickball.setNum(num);
                 
-                System.out.println(balls);
+                //System.out.println(balls);
+		    
             } else if (ball.getName() == "Timerball") {
                 int num = ball.getNum();
                 timerball.setNum(num);
                 
-                System.out.println(balls);
+                //System.out.println(balls);
+		    
             } else if (ball.getName() == "Ultraball") {
                 int num = ball.getNum();
                 ultraball.setNum(num);
                 
-                System.out.println(balls);
+                //System.out.println(balls);
+		    
             } else if (ball.getName() == "Masterball") {
                 int num = ball.getNum();
                 masterball.setNum(num);
                 
-                System.out.println(balls);
+                //System.out.println(balls);
+		    
             }
 
         }
      
-
-        System.out.println(balls);
+        //System.out.println(balls);
         Font myFont = null;
 
         try {
@@ -74,8 +80,15 @@ public class Market extends JFrame {
             myFont = Font.createFont(Font.TRUETYPE_FONT, new FileInputStream("font/BoyzRGrossNF.ttf"));
             myFont = myFont.deriveFont(Font.BOLD, 22f);
 
-        } catch (Exception error) {
-            System.out.print("Exception : " + error);
+         }catch ( FontFormatException error ){
+
+            
+        }catch ( FileNotFoundException error ){
+
+            
+        }catch ( IOException error ){
+
+        
         }
         
         JPanel pk1 = new JPanel();
@@ -89,6 +102,7 @@ public class Market extends JFrame {
 
         JPanel panel1 = new JPanel ( );
         panel1.setLayout ( new BorderLayout ( ) );
+	    
         JButton b1 = new JButton("Razz Berry");
         b1.addActionListener(new ActionListener(){
 	    //anonymous class
@@ -169,8 +183,7 @@ public class Market extends JFrame {
                 System.out.println(quickball);
 	    }
         });
-        
-                
+                 
         JButton b6 = new JButton("Timerball");
         b6.addActionListener(new ActionListener(){
 	    //anonymous class
@@ -256,7 +269,6 @@ public class Market extends JFrame {
         tabbedPane.setForegroundAt ( 1, Color.BLACK );
         
         setSize ( 780, 460 );
-        
         setVisible ( true );
         
     }
