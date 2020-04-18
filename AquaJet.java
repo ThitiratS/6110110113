@@ -11,24 +11,22 @@ public class AquaJet implements Posture {
 
     public void setName(String name) {
         this.name = name;
-
     }
 
-    public String getName() {
-        
+    public String getName() {    
         return name;
     }
 
-    public void setCp(int cp) {
-        
+    public void setCp(int cp) {   
         this.cp = cp;
     }
 
-    public int getCp() {
-        
+    public int getCp() {   
         return cp;
     }
+    
     public String tosString(){
         return name + " " + cp;
     }
+    
 }
