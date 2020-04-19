@@ -6,9 +6,6 @@ import java.awt.*;
 
 public class MainGame extends JFrame {
 
-    /**
-     *
-     */
     private static final long serialVersionUID = 1L;
     private ArrayList<Pokemon> bag;
     private ArrayList<PokemonBall> ball;
