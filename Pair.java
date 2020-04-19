@@ -18,9 +18,14 @@ public class Pair extends JFrame  {
         male = new ArrayList<Pokemon>();
         female = new ArrayList<Pokemon>();
         
-        for(Pokemon b : bags){
-            bag.add(b);
+        try {
+            for(Pokemon b : bags){
+                bag.add(b);
+            }
+        } catch (NullPointerException e) {
+            JOptionPane.showMessageDialog(null,"No Pokemon");
         }
+      
 
         JPanel head = new JPanel();
         JLabel k1 = new JLabel("Hatch Pokemon", JLabel.CENTER);
