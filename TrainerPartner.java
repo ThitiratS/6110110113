@@ -54,17 +54,15 @@ public class TrainerPartner extends JFrame {
             public void actionPerformed(ActionEvent arg0) {
 
                 if(j1.isSelected()){
-                    System.out.println(p.satochiBall());
-                    
+                  
                     JOptionPane.showMessageDialog(null,"Your Partner is " + actors.get(0));
                     Bag.ball = p.satochiBall();
-                    System.out.println(Bag.ball);
                     Hello h = new Hello(Bag.ball,actors.get(0));
                     h.use(Bag.ball,actors.get(0));
                    
   
                 } else if (j2.isSelected()) {
-                    System.out.println(p.hikariBall());
+			
                     Bag.ball = p.satochiBall();
                     JOptionPane.showMessageDialog(null,"Your Partner is "+ actors.get(1));
                     Hello h = new Hello(Bag.ball,actors.get(1));
