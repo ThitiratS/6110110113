@@ -28,7 +28,7 @@ public class BallSelection extends JFrame {
         JPanel head = new JPanel();
         JLabel k1 = new JLabel("Select Your Balls ", JLabel.CENTER);
         head.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-		k1.setFont(k1.getFont().deriveFont(Font.BOLD,35f));
+	k1.setFont(k1.getFont().deriveFont(Font.BOLD,35f));
         head.setForeground(Color.BLACK);
         head.setBackground(Color.YELLOW);
         head.add(k1);
@@ -68,8 +68,8 @@ public class BallSelection extends JFrame {
         JButton btn2 = new JButton("Quickball");
         btn2.add(Box.createRigidArea(new Dimension(360, 50)));
         btn2.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) {
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) {
              
                 for(int i = 0 ; i < balls.size() ; ++i ){
                     if(balls.get(i).getName()=="Quickball"){
@@ -147,7 +147,7 @@ public class BallSelection extends JFrame {
         JPanel button3 = new JPanel();
         button3.setLayout(new BoxLayout(button3, BoxLayout.X_AXIS));
         button3.setBorder(BorderFactory.createEmptyBorder(10, 140, 10, 10));
-        //button3.setBackground(Color.WHITE);
+      
         JButton btn5 = new JButton("Masterball");
         btn5.add(Box.createRigidArea(new Dimension(360, 50)));
         btn5.addActionListener(new ActionListener() {
