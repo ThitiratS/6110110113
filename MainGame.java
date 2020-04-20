@@ -141,6 +141,15 @@ public class MainGame extends JFrame {
             }
 
         });
+	
+	button1.add(btn);
+        button1.add(btn2);
+
+        button2.add(btn3);
+        button2.add(btn4);
+
+        button3.add(btn5);
+        button3.add(btn6);
 
         
         c.add(button2);
