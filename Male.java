@@ -1,12 +1,10 @@
 
-
 import javax.swing.*;
 import java.awt.event.*;
 import java.util.*;
 
 public class Male extends JFrame {
-
-    
+ 
     private static final long serialVersionUID = 1L;
     private JLabel jLabel1;
     public JTextField txtName;
@@ -26,8 +24,7 @@ public class Male extends JFrame {
         for(Pokemon b : male){
             bag.add(b);
         }
-	    
-        //System.out.println(bag);
+	     
         getContentPane().setLayout(null);
         
         jLabel1.setText("Male Pokemon Number");
@@ -48,13 +45,11 @@ public class Male extends JFrame {
                     no = txtName.getText();
                     int result = Integer.parseInt(no);
                     for(int i = 0; i < male.size() ; i++){
-                    //System.out.println(wildPokemon );
+                  
                         if(result == i){
                             Pokemon males = male.get(i);
-
                             new Female(males,female,bags);
-        
-                            System.out.println(males);
+
                         }
                     }
                     
