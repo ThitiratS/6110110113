@@ -59,9 +59,9 @@ public class Mine extends JFrame {
         try {
             no = txtName.getText();
             int result = Integer.parseInt(no);
-            //System.out.println(result);
+           
             for(int i = 0; i < bag.size() ; i++){
-                //System.out.println(wildPokemon );
+               
                 if(result == i){
                     Pokemon myPokemon = bag.get(i);
 
