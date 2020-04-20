@@ -25,7 +25,7 @@ public class Female extends JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(140, 60, 180, 18);
 
-        txtName.setName("txtName"); // NOI18N
+        txtName.setName("txtName"); 
         txtName.setSize(180, 150);
         getContentPane().add(txtName);
         txtName.setBounds(80, 100, 260, 20);
@@ -38,9 +38,9 @@ public class Female extends JFrame {
                 try {
                     no = txtName.getText();
                     int result = Integer.parseInt(no);
-                    //System.out.println(result);
+                  
                     for(int i = 0; i < female.size() ; i++){
-                    //System.out.println(wildPokemon );
+                   
                     if(result == i){
                         Pokemon females = female.get(i);
 
@@ -52,7 +52,7 @@ public class Female extends JFrame {
                 } catch (NumberFormatException evt) {
                     new Female(male, female, bag);
                 }
-                //btnClickActionPerformed(e);
+                
                 setVisible(false);
                 
 	    }
