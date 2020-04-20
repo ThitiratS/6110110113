@@ -138,8 +138,8 @@ public class Hatching3 extends JFrame{
         b1.add(Box.createRigidArea(new Dimension(245, 25)));
         b1.setFont(b1.getFont().deriveFont(Font.ITALIC,18.0f));
         b1.addActionListener(new ActionListener(){
-			//anonymous class
-			public void actionPerformed(ActionEvent e) {
+	    //anonymous class
+	    public void actionPerformed(ActionEvent e) {
                 setVisible(false);
             }
         });
@@ -151,7 +151,7 @@ public class Hatching3 extends JFrame{
         Bag.bag = partners;
         
         setSize(600, 450);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       // setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);	
         
     }
