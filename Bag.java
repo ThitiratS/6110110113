@@ -14,7 +14,7 @@ public class Bag {
 
     public void addBag(String name) {
         Bag.name = name;
-        System.out.println(name);
+       // System.out.println(name);
     }
 
     public static String bagString() {
