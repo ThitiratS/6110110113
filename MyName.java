@@ -30,7 +30,6 @@ public class MyName extends JFrame {
         }      
 	    
         balls = Bag.ball;  
-        //setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
         
         jLabel1.setText("Pokemon Name");
@@ -68,15 +67,13 @@ public class MyName extends JFrame {
             bags.add(partners); 
             Trainer.bag = bags;
             Bag.ball=balls ;
-            System.out.println(Trainer.bag);
-            System.out.println(Bag.ball);
 
     } 
 	
     public void playgui(Pokemon partner,ArrayList<Pokemon> bag) {
         MyName frame = new MyName(partner,bag);
         frame.setSize(400, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	//frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         frame.setResizable(false);
     }
