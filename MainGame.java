@@ -29,7 +29,7 @@ public class MainGame extends JFrame {
         
         for(PokemonBall be : balls){
             ball.add(be);
-            System.out.println(be);
+            
         }
         ball = Bag.ball;
         JPanel head = new JPanel();
@@ -86,7 +86,6 @@ public class MainGame extends JFrame {
             public void actionPerformed(ActionEvent arg0) {
                 ball = Bag.ball;
                 bag = Trainer.bag;
-                System.out.println(ball);
                 new MyBag(bag, ball, berry);
 
             }
@@ -114,10 +113,6 @@ public class MainGame extends JFrame {
             public void actionPerformed(ActionEvent arg0) {
                 
                 ball = Bag.ball;
-                
-                
-                System.out.println(Bag.ball);
-                //System.out.println(ball);
                 new CatchOn(Bag.ball);
 
             }
