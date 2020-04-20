@@ -83,7 +83,7 @@ public class Hatching2 extends JFrame {
         c.add(p1, BorderLayout.PAGE_END);
 	    
         setSize(600, 620);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
         setResizable(false);
 
