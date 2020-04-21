@@ -99,6 +99,15 @@ public class StatusPokemon extends JFrame {
             else if (partners.getName() == "Jigglypuff" ){
                 j1 = new JLabel(new ImageIcon("img/jigglypuff.jpg"));
             }
+	    else if (partners.getName() == "Kyodaimax" ){
+                j1 = new JLabel(new ImageIcon("img/kyodaimax.jpg"));
+            }
+            else if (partners.getName() == "Lvysaur" ){
+                j1 = new JLabel(new ImageIcon("img/lvysaur.jpg"));
+            }
+            else if (partners.getName() == "Wartortle" ){
+                j1 = new JLabel(new ImageIcon("img/wartortle.jpg"));
+            }
         
         
             j1.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
