@@ -105,20 +105,6 @@ public class MainGame extends JFrame {
 
         });
 
-        JButton btn6 = new JButton("CATCH"); 
-        btn6.add(Box.createRigidArea(new Dimension(100, 20)));
-        btn6.addActionListener(new ActionListener() {
-           
-
-            public void actionPerformed(ActionEvent arg0) {
-                
-                ball = Bag.ball;
-                new CatchOn(Bag.ball);
-
-            }
-
-        });
-        
         JPanel button3 = new JPanel();
         button3.setLayout(new BoxLayout(button3, BoxLayout.X_AXIS));
         button3.setBounds(170, 250, 260, 30);
@@ -132,6 +118,20 @@ public class MainGame extends JFrame {
                 Bag.ball = balls;
                 ball = Bag.ball;
                 new MyPartner(balls);
+
+            }
+
+        });
+	    
+	JButton btn6 = new JButton("CATCH"); 
+        btn6.add(Box.createRigidArea(new Dimension(100, 20)));
+        btn6.addActionListener(new ActionListener() {
+           
+
+            public void actionPerformed(ActionEvent arg0) {
+                
+                ball = Bag.ball;
+                new CatchOn(Bag.ball);
 
             }
 
