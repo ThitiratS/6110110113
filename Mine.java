@@ -104,6 +104,8 @@ public class Mine extends JFrame {
             JOptionPane.showMessageDialog(null,"You Win");
 	    int exp = myPokemon.getExp()+60;
             myPokemon.setExp(exp);
+	    myPokemon.upLevel(myPokemon);
+            myPokemon.upPokemon(myPokemon);
             new BallSelection(wildPokemon,myPokemon,bag,ball);
  
         }
@@ -113,6 +115,8 @@ public class Mine extends JFrame {
 	    JOptionPane.showMessageDialog(null,""+wildPokemon.getName()+"win");
 	    int exp = myPokemon.getExp()+20;
             myPokemon.setExp(exp);
+	    myPokemon.upLevel(myPokemon);
+            myPokemon.upPokemon(myPokemon);
         }
     }
     
