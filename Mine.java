@@ -112,7 +112,7 @@ public class Mine extends JFrame {
 	    
         else{
             System.out.println(wildPokemon.getName() + " win");
-	    JOptionPane.showMessageDialog(null,""+wildPokemon.getName()+"win");
+	    JOptionPane.showMessageDialog(null,""+wildPokemon.getName()+" win");
 	    int exp = myPokemon.getExp()+20;
             myPokemon.setExp(exp);
 	    myPokemon.upLevel(myPokemon);
