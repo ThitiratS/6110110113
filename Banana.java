@@ -21,7 +21,7 @@ public class Banana extends Food {
             currentHp = hp;
         }
         pokemon.setHp(currentHp);    
-        //System.out.println("HP : " + pokemon.getHp());
+        System.out.println("HP : " + pokemon.getHp());
         
     }
 
