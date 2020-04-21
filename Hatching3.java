@@ -12,10 +12,9 @@ public class Hatching3 extends JFrame{
 
     private static final long serialVersionUID = 1L;
 
-    public Hatching3(Pokemon male,Pokemon female,ArrayList<Pokemon> partners) {
+    public Hatching3(Pokemon pokemons, ArrayList<Pokemon> partners) {
         super("Hatch Pokemon Egg");
-        ArrayList<Pokemon> pokemons = new ArrayList<Pokemon>();
-        //System.out.println(partners);
+  
      
         Font myFont2 = null;
         
@@ -36,97 +35,55 @@ public class Hatching3 extends JFrame{
         }
         Container c = getContentPane();
         JLabel j1 = new JLabel(new ImageIcon(""));;
-        if(male.getType() == "Electric" || female.getType() == "Electric" ){
-            for(int i =0 ; i < 1 ;++i){
-                int type = (int)(Math.random()*3);
-                if(type == 0){
-                    pokemons.add(new Electabuzz("Electabuzz","Electric"));
-                    j1 = new JLabel(new ImageIcon("img/electabuzz.jpg"));
-                }
-                if(type == 1){
-                    pokemons.add(new Voltorb("Voltorb","Electric"));
-                    j1 = new JLabel(new ImageIcon("img/voltorb.jpg"));
-                }
-                if(type == 2){
-                    pokemons.add(new Pichu("Pichu","Electric"));
-                    j1 = new JLabel(new ImageIcon("img/pichu.jpg"));
-                }
-            }
+        if(pokemons.getName() == "Electabuzz"){
+           
+            j1 = new JLabel(new ImageIcon("img/electabuzz.jpg"));
         }
-        if(male.getType() == "Water" ||  female.getType() == "Water"){
-            for(int i =0 ; i < 1 ;++i){
-                int type = (int)(Math.random()*3);
-                if(type == 0){
-                    pokemons.add(new Sobble("Sobble","Water"));
-                    j1 = new JLabel(new ImageIcon("img/sobble.jpg"));
-                }
-                if(type == 1){
-                    pokemons.add(new Drednaw("Drednaw","Water"));
-                    j1 = new JLabel(new ImageIcon("img/drednaw.jpg"));
-                }
-                if(type == 2){
-                    pokemons.add(new Krabby("Krabby","Water"));
-                    j1 = new JLabel(new ImageIcon("img/krabby.jpg"));
-                }
-            }
+        else if(pokemons.getName() == "Voltorb"){
+           
+            j1 = new JLabel(new ImageIcon("img/voltorb.jpg"));
         }
-        if(male.getType() == "Grass" || female.getType() == "Grass"){
-            for(int i =0 ; i < 1 ;++i){
-                int type = (int)(Math.random()*3);
-                if(type == 0){
-                    pokemons.add(new Shiftry("Shiftry","Grass"));
-                    j1 = new JLabel(new ImageIcon("img/shiftry.jpg"));
-                }
-                if(type == 1){
-                    pokemons.add(new Lombre("Lombre","Grass"));
-                    j1 = new JLabel(new ImageIcon("img/lombre.jpg"));
-                }
-                if(type == 2){
-                    pokemons.add(new Grookey("Grookey","Grass"));
-                    j1 = new JLabel(new ImageIcon("img/grookey.jpg"));
-                }
-            }
+        else if(pokemons.getName() == "Pichu"){
+           
+            j1 = new JLabel(new ImageIcon("img/pichu.jpg"));
         }
-        if(male.getType() == "Normal" || female.getType() == "Normal" ){
-            for(int i =0 ; i < 1 ;++i){
-                int type = (int)(Math.random()*3);
-                if(type == 0){
-                    pokemons.add(new Kangaskhan("Kangaskhan","Normal"));
-                    j1 = new JLabel(new ImageIcon("img/kangaskhan.jpg"));
-                }
-                if(type == 1){
-                    pokemons.add(new Eevee("Eevee","Normal"));
-                    j1 = new JLabel(new ImageIcon("img/eevee.jpg"));
-                }
-                if(type == 2){
-                    pokemons.add(new Jigglypuff("Jigglypuff","Normal"));
-                    j1 = new JLabel(new ImageIcon("img/jigglypuff.jpg"));
-                }
-            }
+        else if(pokemons.getName() == "Sobble"){
+           
+            j1 = new JLabel(new ImageIcon("img/sobble.jpg"));
         }
-       int j=0;
-        if(pokemons.size() > 1){
-            for(int i = 0 ;i < 1 ; i++){
-                int t = (int)(Math.random()*2);
-                if(t == 0){
-                    
-                    //partners.add(p);
-                    j = 0;
-                    
-                    
-                }
-                else if(t == 1){
-                  
-                    //partners.add(p);
-                    j =1;
-                    
-                }
-            }
-            
+        else if(pokemons.getName() == "Drednaw"){
+           
+            j1 = new JLabel(new ImageIcon("img/drednaw.jpg"));
         }
-        MyName m = new MyName(pokemons.get(j), partners);
-        m.playgui(pokemons.get(j), partners);
-	    
+        else if(pokemons.getName() == "Krabby"){
+           
+            j1 = new JLabel(new ImageIcon("img/krabby.jpg"));
+        }
+        else if(pokemons.getName() == "Shiftry"){
+           
+            j1 = new JLabel(new ImageIcon("img/shiftry.jpg"));
+        }
+        else if(pokemons.getName() == "Lombre"){
+           
+            j1 = new JLabel(new ImageIcon("img/lombre.jpg"));
+        }
+        else if(pokemons.getName() == "Grookey"){
+           
+            j1 = new JLabel(new ImageIcon("img/grookey.jpg"));
+        }
+        else if(pokemons.getName() == "Kangaskhan"){
+           
+            j1 = new JLabel(new ImageIcon("img/kangaskhan.jpg"));
+        }
+        else if(pokemons.getName() == "Eevee"){
+           
+            j1 = new JLabel(new ImageIcon("img/eevee.jpg"));
+        }
+        else if(pokemons.getName() == "Jigglypuff"){
+           
+            j1 = new JLabel(new ImageIcon("img/jigglypuff.jpg"));
+        }
+        
         j1.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
         JPanel pk1 = new JPanel();
@@ -143,6 +100,8 @@ public class Hatching3 extends JFrame{
         b1.addActionListener(new ActionListener(){
 	    //anonymous class
 	    public void actionPerformed(ActionEvent e) {
+                MyName m = new MyName(pokemons, partners);
+                m.playgui(pokemons, partners);
                 setVisible(false);
             }
         });
@@ -150,13 +109,12 @@ public class Hatching3 extends JFrame{
         c.add(pk1, BorderLayout.NORTH);
         c.add(j1, BorderLayout.CENTER);
         c.add(b1, BorderLayout.SOUTH);
-
+        
         Bag.bag = partners;
         
         setSize(600, 450);
-       // setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);	
-        
+
     }
 
 }
