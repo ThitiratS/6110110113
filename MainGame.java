@@ -131,7 +131,7 @@ public class MainGame extends JFrame {
             public void actionPerformed(ActionEvent arg0) {
                 Bag.ball = balls;
                 ball = Bag.ball;
-                new MyPartner();
+                new MyPartner(balls);
 
             }
 
