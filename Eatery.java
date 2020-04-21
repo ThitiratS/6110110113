@@ -51,7 +51,7 @@ public class Eatery extends JFrame {
                 } catch (NumberFormatException evt) {
                    
                     JOptionPane.showMessageDialog(null, "ErrorMsg","Please Enter Number", JOptionPane.ERROR_MESSAGE);
-                }
+                
 		        
                 } catch (NumberFormatException evt) {
                    
