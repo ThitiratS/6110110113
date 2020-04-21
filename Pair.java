@@ -102,7 +102,7 @@ public class Pair extends JFrame  {
         c.add(head, BorderLayout.NORTH);
         
         
-        setSize(730, 350);
+        setSize(735, 350);
         //setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
