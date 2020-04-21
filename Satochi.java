@@ -2,7 +2,7 @@
 import java.util.*;
 
 public class Satochi implements Actor{
-    protected String name;
+    private String name;
     private ArrayList<PokemonBall> ball;
     private int ballnum;
     
