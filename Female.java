@@ -51,6 +51,9 @@ public class Female extends JFrame {
                     
                 } catch (NumberFormatException evt) {
                     new Female(male, female, bag);
+			
+                } catch (IndexOutOfBoundsException evt) {
+                    new Female(male, female, bags);
                 }
                 
                 setVisible(false);
