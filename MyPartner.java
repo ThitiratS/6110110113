@@ -57,10 +57,10 @@ public class MyPartner extends JFrame {
 
                 if(j1.isSelected()){
                     bag.removeAll(bag);
-                    //System.out.println(Bag.ball);
+                    Bag.ball = balls;
                     Pokemon pokemonPartner = partner.get(0);
                     JOptionPane.showMessageDialog(null,"Your Pokemon : " + partner.get(0));
-                    //bag.add(pokemonPartner);
+                    
                     MyName frame = new MyName(pokemonPartner,bag);
                     frame.playgui(pokemonPartner,bag);
                     setVisible(false);
@@ -69,19 +69,20 @@ public class MyPartner extends JFrame {
   
                 } else if (j2.isSelected()) {
                     bag.removeAll(bag);
+                    Bag.ball = balls;
                     Pokemon pokemonPartner = partner.get(1);
-                    //System.out.println(Bag.ball);
                     JOptionPane.showMessageDialog(null,"Your Pokemon : "+ partner.get(1));
-                    //bag.add(pokemonPartner);
+                    
                     MyName frame = new MyName(pokemonPartner,bag);
                     frame.playgui(pokemonPartner,bag);
                     setVisible(false);
 
                 } else if (j3.isSelected()) {
                     bag.removeAll(bag);
+                    Bag.ball = balls;
                     Pokemon pokemonPartner = partner.get(2);
                     JOptionPane.showMessageDialog(null,"Your Pokemon : "+ partner.get(2));
-                    //bag.add(pokemonPartner);
+                   
                     MyName frame = new MyName(pokemonPartner,bag);
                     frame.playgui(pokemonPartner,bag);
                     setVisible(false);
@@ -89,9 +90,10 @@ public class MyPartner extends JFrame {
 
                 } else if(j4.isSelected()){ 
                     bag.removeAll(bag);
+                    Bag.ball = balls;
                     Pokemon pokemonPartner = partner.get(3);
                     JOptionPane.showMessageDialog(null,"Your Pokemon : "+ partner.get(3));
-                    //bag.add(pokemonPartner);
+                   
                     MyName frame = new MyName(pokemonPartner,bag);
                     frame.playgui(pokemonPartner,bag);
                     setVisible(false);
