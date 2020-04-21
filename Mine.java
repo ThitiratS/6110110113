@@ -102,12 +102,17 @@ public class Mine extends JFrame {
             Trainer.bag = bag;
             System.out.println(bag);
             JOptionPane.showMessageDialog(null,"You Win");
+	    int exp = myPokemon.getExp()+60;
+            myPokemon.setExp(exp);
             new BallSelection(wildPokemon,myPokemon,bag,ball);
  
         }
 	    
         else{
             System.out.println(wildPokemon.getName() + " win");
+	    JOptionPane.showMessageDialog(null,""+wildPokemon.getName()+"win");
+	    int exp = myPokemon.getExp()+20;
+            myPokemon.setExp(exp);
         }
     }
     
