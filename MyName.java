@@ -22,8 +22,7 @@ public class MyName extends JFrame {
         btnClick = new JButton();
         partners = partner;
         bags = new ArrayList<Pokemon>(); 
-        balls = new ArrayList<PokemonBall>();
-        System.out.println(Bag.ball);
+        balls = new ArrayList<PokemonBall>();      
       
         for(Pokemon p : bag){
             bags.add(p);
