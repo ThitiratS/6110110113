@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Hikari implements Actor {
     
-    protected String name;
+    private String name;
     private ArrayList<PokemonBall> ball;
     private int ballnum;
  
