@@ -14,7 +14,7 @@ public class MyPartner extends JFrame {
         
         super("Pokemon Game");
         Container c = getContentPane();
-        System.out.println(Bag.ball);
+       
         ArrayList<Pokemon> partner = AllPokemon.getPokemon(4);
         bag = new ArrayList<Pokemon>();
         
