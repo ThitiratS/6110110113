@@ -50,12 +50,12 @@ public class Eatery extends JFrame {
                     
                 } catch (NumberFormatException evt) {
                    
-                    JOptionPane.showMessageDialog(null, "ErrorMsg","Please Enter Number", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Please Enter Number","ErrorMsg", JOptionPane.ERROR_MESSAGE);
                 
 		        
                 } catch (NullPointerException evt) {
                    
-                    JOptionPane.showMessageDialog(null, "ErrorMsg","No Pokemon", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "No Pokemon","ErrorMsg", JOptionPane.ERROR_MESSAGE);
                 }
                
                 setVisible(false);
