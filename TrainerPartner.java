@@ -20,7 +20,7 @@ public class TrainerPartner extends JFrame {
         actors = p.act();
 
         JPanel head = new JPanel();
-        JLabel k1 = new JLabel("Pokemon Hatching ", JLabel.CENTER);
+        JLabel k1 = new JLabel("Pokemon Trainer", JLabel.CENTER);
         head.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 	k1.setFont(k1.getFont().deriveFont(Font.BOLD,35f));
         head.setForeground(Color.BLACK);
