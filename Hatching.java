@@ -119,7 +119,7 @@ public class Hatching extends JFrame {
         c.add(b1,BorderLayout.SOUTH);
 	    
         pack();
-        setSize(800, 470);
+        setSize(805, 470);
         //setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);	
         //setResizable(false);
