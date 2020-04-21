@@ -80,7 +80,7 @@ public class Hello extends JFrame {
             m.setIconImage(new ImageIcon("img/hikari.jpg").getImage());
         }
 
-        //m.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        m.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         m.setVisible(true);
         
     }
