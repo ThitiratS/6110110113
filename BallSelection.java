@@ -199,8 +199,7 @@ public class BallSelection extends JFrame {
 
             MyName m = new MyName(wildPokemon,bag);
             m.playgui(wildPokemon,bag);
-            int exp = myPokemon.getExp()+60;
-            myPokemon.setExp(exp);
+           
             myPokemon.upLevel(myPokemon);
             myPokemon.upPokemon(myPokemon);
                
@@ -210,8 +209,7 @@ public class BallSelection extends JFrame {
             System.out.println("You failed to catch");
             JOptionPane.showMessageDialog(null,"You failed to catch");
             new BallSelection( wildPokemon, myPokemon, bag, balls);
-            int exp = myPokemon.getExp()+20;
-            myPokemon.setExp(exp);
+            
             myPokemon.upLevel(myPokemon);
             myPokemon.upPokemon(myPokemon);
    
