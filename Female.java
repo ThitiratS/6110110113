@@ -53,7 +53,7 @@ public class Female extends JFrame {
                     new Female(male, female, bag);
 			
                 } catch (IndexOutOfBoundsException evt) {
-                    new Female(male, female, bags);
+                    new Female(male, female, bag);
                 }
                 
                 setVisible(false);
