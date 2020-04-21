@@ -104,29 +104,29 @@ public class Hatching3 extends JFrame{
                 }
             }
         }
-        int i=0;
+       int j=0;
         if(pokemons.size() > 1){
             for(int i = 0 ;i < 1 ; i++){
                 int t = (int)(Math.random()*2);
                 if(t == 0){
-                    Pokemon p  = pokemons.get(0);
+                    
                     //partners.add(p);
-                    i = 0;
+                    j = 0;
                     
                     
                 }
                 else if(t == 1){
-                    Pokemon p  = pokemons.get(1);
+                  
                     //partners.add(p);
-                    i =1;
+                    j =1;
                     
                 }
             }
             
         }
-        MyName m = new MyName(pokemons.get(i), partners);
-        m.playgui(pokemons.get(i), partners);
-        
+        MyName m = new MyName(pokemons.get(j), partners);
+        m.playgui(pokemons.get(j), partners);
+	    
         j1.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
         JPanel pk1 = new JPanel();
