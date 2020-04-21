@@ -63,7 +63,7 @@ public class TrainerPartner extends JFrame {
   
                 } else if (j2.isSelected()) {
 			
-                    Bag.ball = p.satochiBall();
+                     Bag.ball = p.hikariBall();
                     JOptionPane.showMessageDialog(null,"Your Partner is "+ actors.get(1));
                     Hello h = new Hello(Bag.ball,actors.get(1));
                     h.use(Bag.ball,actors.get(1));
