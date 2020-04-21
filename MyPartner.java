@@ -10,7 +10,7 @@ public class MyPartner extends JFrame {
     private ArrayList<Pokemon> bag;
     private JRadioButton j1,j2,j3,j4;
  
-    public MyPartner(){
+    public MyPartner(ArrayList<PokemonBall> balls){
         
         super("Pokemon Game");
         Container c = getContentPane();
