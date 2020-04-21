@@ -196,12 +196,11 @@ public class BallSelection extends JFrame {
         
         int value = ((3*wildPokemon.getMaxHp()) - (2*wildPokemon.getHp())+(3*myPokemon.getMaxHp()) -(2*myPokemon.getHp()) )* b.getRate() * 100 / 10 * (3*wildPokemon.getMaxHp());
         if(value > 50 ){
-
+	
+	    JOptionPane.showMessageDialog(null,"You catch it");
             MyName m = new MyName(wildPokemon,bag);
             m.playgui(wildPokemon,bag);
-           
-            myPokemon.upLevel(myPokemon);
-            myPokemon.upPokemon(myPokemon);
+          
                
         }
 
@@ -210,8 +209,7 @@ public class BallSelection extends JFrame {
             JOptionPane.showMessageDialog(null,"You failed to catch");
             new BallSelection( wildPokemon, myPokemon, bag, balls);
             
-            myPokemon.upLevel(myPokemon);
-            myPokemon.upPokemon(myPokemon);
+          
    
         }
     }
