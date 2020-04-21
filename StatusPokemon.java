@@ -119,7 +119,7 @@ public class StatusPokemon extends JFrame {
         }
 
         JPanel p3 = new JPanel();
-        p3.setBorder(BorderFactory.createEmptyBorder(10, 265, 15, 10));
+        p3.setBorder(BorderFactory.createEmptyBorder(10, 275, 15, 10));
         p3.setLayout(new BoxLayout(p3, BoxLayout.X_AXIS));
 
         JButton button1 = new JButton("Next");
@@ -162,10 +162,10 @@ public class StatusPokemon extends JFrame {
         c.add(p2, BorderLayout.EAST);	
         c.add(p3, BorderLayout.SOUTH);
 
-        setSize(720, 350);
+        setSize(760, 350);
         //setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);	
-        setResizable(false);
+        //setResizable(false);
         
     }
     
