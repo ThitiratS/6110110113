@@ -55,6 +55,9 @@ public class Male extends JFrame {
                     
                 } catch (NumberFormatException evt) {
                     new Male(male, female, bags);
+			
+                } catch (IndexOutOfBoundsException evt) {
+                    new Male(male, female, bags);
                 }
 
                 setVisible(false);
