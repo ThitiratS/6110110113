@@ -73,7 +73,7 @@ public class Mine extends JFrame {
             
         } catch (NumberFormatException e) {
            
-            JOptionPane.showMessageDialog(null, "ErrorMsg","Please Enter Number", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Please Enter Number","ErrorMsg", JOptionPane.ERROR_MESSAGE);
         }
 
     } 
