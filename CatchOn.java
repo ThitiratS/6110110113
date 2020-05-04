@@ -122,13 +122,7 @@ public class CatchOn extends JFrame {
                         setVisible(false);
                        
     
-                    } else if(j5.isSelected()){ 
-                        
-                        bag.removeAll(bag);
-                        new MyPokemon(wild.get(5),ball);
-                        setVisible(false);
-                       
-                    }
+                    } 
                 
                 } catch (NullPointerException e) {
                     //System.out.println("No Pokemon");
